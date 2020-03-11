@@ -8,12 +8,32 @@ public class OneZero : MonoBehaviour
     [SerializeField] public int value;
     [SerializeField] public GameObject displayText;
     [SerializeField] public UnityEvent OnChange;
+    [SerializeField] public bool changeCables;
+    [SerializeField] public GameObject[] cablesOff;
+    [SerializeField] public GameObject[] cablesOn;
+    [SerializeField] public Color colorOff = new Color(0.4528302f, 0.4528302f, 0.4528302f);
+    [SerializeField] public Color colorOn = new Color(0.1682093f, 0.3732349f, 0.5660378f);
 
     private GameObject main;
 
+    void ChangeCablesColor()
+    {
+        if (changeCables)
+        {
+            foreach (GameObject i in cablesOff)
+            {
+                i.GetComponent<SpriteRenderer>().color = (value == 1 ? colorOff : colorOn);
+            }
+            foreach (GameObject i in cablesOn)
+            {
+                i.GetComponent<SpriteRenderer>().color = (value != 1 ? colorOff : colorOn);
+            }
+        }
+    }
     void Start()
     {
         main = (GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0);
+        ChangeCablesColor();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,7 +48,9 @@ public class OneZero : MonoBehaviour
             {
                 value = 0;
             }
+            ChangeCablesColor();
             displayText.GetComponent<TMPro.TextMeshProUGUI>().text = value.ToString();
+            OnChange.Invoke();
         }
     }
 
