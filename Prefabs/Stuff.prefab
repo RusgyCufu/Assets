@@ -47,6 +47,8 @@ MonoBehaviour:
   VALUE: 0.2
   VALUE_SPEED: 0.06
   flip: 0
+  constY: 0
+  constYValue: 0
 --- !u!212 &4555499774346805633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -381,11 +383,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -27.593582
-      objectReference: {fileID: 0}
-    - target: {fileID: 1794168439554562859, guid: 159b75e530b86b649b9a8f312e46919a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 702.1406
       objectReference: {fileID: 0}
     - target: {fileID: 1794168439554562859, guid: 159b75e530b86b649b9a8f312e46919a,
         type: 3}
