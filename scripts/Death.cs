@@ -29,10 +29,9 @@ public class Death : MonoBehaviour
     {
         main = (GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0);
         restartScreen = (GameObject)GameObject.FindGameObjectsWithTag("Restart").GetValue(0);
-
-        oldColor = gameObject.GetComponent<SpriteRenderer>().color;
         if (hide)
         {
+            oldColor = gameObject.GetComponent<SpriteRenderer>().color;
             gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, 0f);
         }
     }
@@ -40,7 +39,10 @@ public class Death : MonoBehaviour
     {
         if (collision == main.GetComponent<CapsuleCollider2D>())
         {
-            gameObject.GetComponent<SpriteRenderer>().color = oldColor;
+            if (hide)
+            {
+                gameObject.GetComponent<SpriteRenderer>().color = oldColor;
+            }
             restartScreen.GetComponent<Canvas>().enabled = true;
             AudioManager.AudioManager.m_instance.PlaySFX(2);
             Time.timeScale = 0;

@@ -38,7 +38,7 @@ class FollowRobot : MonoBehaviour
         }
 
         //flip
-        GetComponent<SpriteRenderer>().flipX = newPos.x > main.transform.position.x;
+        transform.localScale = new Vector3((newPos.x > main.transform.position.x)?-1f : 1f,1f,1f);
 
         //eff
         effTime += Time.deltaTime;

@@ -35,7 +35,7 @@ public class main_script : MonoBehaviour
     }
     void Start()
     {
-        if(PlayerPrefs.HasKey("Coins") == false)
+        if (PlayerPrefs.HasKey("Coins") == false)
         {
             PlayerPrefs.SetInt("Coins", 0);
         }
@@ -44,7 +44,9 @@ public class main_script : MonoBehaviour
             coins = PlayerPrefs.GetInt("Coins");
         }
 
-        if(debug == false)
+        if (debug == false)
+        {
             respawn(checkpoints[PlayerPrefs.GetInt("CheckpointIndex")]);
+        }
     }
 }
