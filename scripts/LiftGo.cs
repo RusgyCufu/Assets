@@ -24,7 +24,7 @@ public class LiftGo : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision == main.GetComponent<CapsuleCollider2D>() && go)
+        if (collision == main.GetComponent<CapsuleCollider2D>() && go && (gameObject.GetComponent<LiftGo>().enabled))
         {
             gameObject.GetComponent<MovingPlatform>().move = true;
             liftLocker.SetActive(true);

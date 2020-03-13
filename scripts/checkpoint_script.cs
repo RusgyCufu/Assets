@@ -24,7 +24,6 @@ public class checkpoint_script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(open);
         if (collision == (Collider2D)((GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0)).GetComponent<CapsuleCollider2D>());
         {
             if (!open)

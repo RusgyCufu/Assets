@@ -41,6 +41,7 @@ public class CameraFollow : MonoBehaviour
 	}
 	void Start()
 	{
+		rootPos = transform.position.x;
 		target = (GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0);
 		if (useDefaults)
 		{

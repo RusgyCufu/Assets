@@ -8,6 +8,12 @@ class FollowRobot : MonoBehaviour
     [SerializeField] float effMoveSpeed;
     [SerializeField] float effSpeed;
 
+    [SerializeField] Transform key1Pos;
+    [SerializeField] Transform key2Pos;
+
+    [HideInInspector] public GameObject key1 = null;
+    [HideInInspector] public GameObject key2 = null;
+
     GameObject main;
     CameraFollow cam;
 
@@ -19,6 +25,36 @@ class FollowRobot : MonoBehaviour
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
     }
 
+    public bool HasKey()
+    {
+        return (key1 != null || key2 != null);
+    }
+    public void Addkey(GameObject key)
+    {
+        if(key1 == null)
+        {
+            key1 = key;
+            key.GetComponent<Key>().SetTarget(key1Pos);
+        }
+        else if(key2 == null)
+        {
+            key2 = key;
+            key.GetComponent<Key>().SetTarget(key2Pos);
+        }
+    }
+    public void RemoveKey()
+    {
+        if(key2 != null)
+        {
+            key2.GetComponent<Key>().GoSleep();
+            key2 = null;
+        }
+        else
+        {
+            key1.GetComponent<Key>().GoSleep();
+            key1 = null;
+        }
+    }
     private void Update()
     {
         //var

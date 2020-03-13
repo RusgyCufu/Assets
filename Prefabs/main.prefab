@@ -45,6 +45,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -193,6 +194,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -282,6 +284,9 @@ MonoBehaviour:
   resp: {fileID: 0}
   checkpoints: []
   coins: 0
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1695927482924189710
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,7 +7,8 @@ public class OneZero : MonoBehaviour
 {
     [SerializeField] public int value;
     [SerializeField] public GameObject displayText;
-    [SerializeField] public UnityEvent OnChange;
+    [SerializeField] public UnityEvent OnOff;
+    [SerializeField] public UnityEvent OnOn;
     [SerializeField] public bool changeCables;
     [SerializeField] public GameObject[] cablesOff;
     [SerializeField] public GameObject[] cablesOn;
@@ -16,7 +17,7 @@ public class OneZero : MonoBehaviour
 
     private GameObject main;
 
-    void ChangeCablesColor()
+    public void ChangeCablesColor()
     {
         if (changeCables)
         {
@@ -43,14 +44,16 @@ public class OneZero : MonoBehaviour
             if (value == 0)
             {
                 value = 1;
+                OnOn.Invoke();
             }
             else if(value == 1)
             {
                 value = 0;
+                OnOff.Invoke();
             }
             ChangeCablesColor();
             displayText.GetComponent<TMPro.TextMeshProUGUI>().text = value.ToString();
-            OnChange.Invoke();
+            
         }
     }
 

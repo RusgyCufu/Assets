@@ -50,7 +50,15 @@ public class st_menu : MonoBehaviour
         PlayerPrefs.SetInt("CheckpointIndex", 0);
         SceneManager.LoadScene(lvl);
     }
-
+    public void ResetScene()
+    {
+        SceneManager.LoadScene("Scenes/StartMenu");
+    }
+    public void SetLanguage(int lang)
+    {
+        PlayerPrefs.SetInt("Language", lang);
+        ResetScene();
+    }
     public void Exit()
     {
         //UnityEditor.EditorApplication.isPlaying = false;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class main_script : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class main_script : MonoBehaviour
 
     [SerializeField] public GameObject[] checkpoints;
     [SerializeField] public int coins;
+    [SerializeField] UnityEvent deathEvent;
 
     void RewriteCoins()
     {
@@ -28,6 +30,10 @@ public class main_script : MonoBehaviour
     public void respawn(GameObject respawnPoint)
     {
         this.transform.position = respawnPoint.transform.position;
+        GameObject.FindGameObjectWithTag("Phantom").GetComponent<Phantom>().ResetPos();
+
+        if (deathEvent != null)
+            deathEvent.Invoke();
         if (respawnPoint.GetComponent<checkpoint_script>().doCam)
         {
             ((GameObject)GameObject.FindGameObjectsWithTag("MainCamera").GetValue(0)).GetComponent<CameraFollow>().ResetPos(respawnPoint.GetComponent<checkpoint_script>().lookDirection);

@@ -11,6 +11,11 @@ public class Phantom : MonoBehaviour
     [HideInInspector] public bool constY;
     [HideInInspector] public float constYValue;
     private GameObject main;
+
+    public void ResetPos()
+    {
+        transform.position = main.transform.position;
+    }
     void Start()
     {
         main = (GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0);
