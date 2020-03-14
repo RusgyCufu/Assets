@@ -19,7 +19,7 @@ public class Launching : MonoBehaviour
     void Update()
     {
         ++i;
-        int tmp = i / 5;
+        int tmp = i / 3;
         string tmpstr = "";
         for(int j = 0; j < tmp ;++j)
         {
