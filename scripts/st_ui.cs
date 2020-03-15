@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class st_ui : MonoBehaviour
 {
-    [SerializeField] private string level = "lvl1";
+    [SerializeField] private string level = "Launch";
     // Start is called before the first frame update
     void Start()
     {
