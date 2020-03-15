@@ -12,7 +12,7 @@ public class movement : MonoBehaviour
 
 	public float runSpeed = 40f;
 
-	float horizontalMove = 0f;
+	float horizontalMove = 40f;
 	bool jump = false;
 	bool act = false;
 
