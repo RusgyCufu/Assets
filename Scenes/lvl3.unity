@@ -34437,7 +34437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed52a599a22dcd54682516b2b1d0933f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EN: Lelel = 3
+  EN: Level = 3
   RU: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C = 3"
 --- !u!114 &1649063694
 MonoBehaviour:
@@ -34457,7 +34457,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lelel = 1
+  m_text: Level = 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c087f2d4663ac2a479d54f88f811714a, type: 2}
   m_sharedMaterial: {fileID: -5165366145121968330, guid: c087f2d4663ac2a479d54f88f811714a,

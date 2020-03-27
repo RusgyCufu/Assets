@@ -257,7 +257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.03857511, y: 0.1}
   m_AnchorMax: {x: 0.765558, y: 0.938}
-  m_AnchoredPosition: {x: -0.07495117, y: -0.098724365}
+  m_AnchoredPosition: {x: -0.07495117, y: -0.09869385}
   m_SizeDelta: {x: 0.15002, y: 0.19751}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505401313
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'A Wgmlgz game
+  m_text: 'a WGMLGZ game
 
 
     Team Lead: Wgmlgz
@@ -291,9 +291,9 @@ MonoBehaviour:
 
     Narrative Director: Wgmlgz
 
-    Level Disigner: Wgmlgz
+    Level Disigners: Wgmlgz, Rusgu Cufu, lbvfKL
 
-    Level concepts: Wgmlgz, Rusgu Cufu, Lbvfc
+    Level concepts: Wgmlgz, Rusgu Cufu, lbvfKL
 
     Illustrations: Wgmlgz
 
@@ -303,17 +303,17 @@ MonoBehaviour:
 
     Dialog whriter: Wgmlgz
 
-    Publisher: Wgmlgz
+    Publishing: Rusgu Cufu, Wgmlgz
 
     Programming: Wgmlgz
 
-    Testers: Wgmlgz, Rusgu Cufu, Lbvfc
+    Testers: Wgmlgz, Rusgu Cufu, Lbvfc, Ilskr, Waraidako
 
     Localization: Wgmlgz
 
-    Quality control: Wgmlgz
+    Quality control: Wgmlgz, Rusgu Cufu, lbvfKL
 
-    Special thanks:Wgmlgz, Rusgu Cufu, Lbvfc
+    Special thanks:Wgmlgz, Rusgu Cufu, lbvfKL, Waraidako
 
 '
   m_isRightToLeft: 0
@@ -344,13 +344,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 28.55
+  m_fontSize: 28.4
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 60.9
-  m_fontStyle: 32
+  m_fontStyle: 0
   m_textAlignment: 257
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -385,10 +385,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 505401313}
-    characterCount: 449
+    characterCount: 534
     spriteCount: 0
-    spaceCount: 58
-    wordCount: 58
+    spaceCount: 69
+    wordCount: 69
     linkCount: 0
     lineCount: 19
     pageCount: 1
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 60.8
+  m_fontSize: 60.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -812,7 +812,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 64.55
+  m_fontSize: 64.2
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1108,7 +1108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.77757514, y: 0.85600007}
   m_AnchorMax: {x: 0.98456657, y: 0.95000005}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0.000015259}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047684448
