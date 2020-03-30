@@ -22,97 +22,6 @@ public class CharacterController2D : MonoBehaviour
 	private int jumpsLeft = 0;
 	bool wasGrounded = false;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	[Header("Events")]
 	[Space]
 
@@ -125,7 +34,7 @@ public class CharacterController2D : MonoBehaviour
 	bool m_wasCrouching = false;
 	GameObject phantom;
 
-	private void Jump()
+	public void Jump(float force = 0f)
 	{
 		//Stop falling
 		Vector3 curVelocity = m_Rigidbody2D.velocity;
@@ -133,7 +42,7 @@ public class CharacterController2D : MonoBehaviour
 		m_Rigidbody2D.velocity = curVelocity;
 
 		//add jump force
-		m_Rigidbody2D.AddRelativeForce(new Vector2(0f, m_JumpForce));
+		m_Rigidbody2D.AddRelativeForce(new Vector2(0f, force == 0f?m_JumpForce: force));
 
 		AudioManager.AudioManager.m_instance.PlaySFX("Jump");
 	}
