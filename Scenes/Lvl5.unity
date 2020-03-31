@@ -9827,7 +9827,7 @@ PrefabInstance:
     - target: {fileID: 4555138270608627970, guid: 12b10642e2f7af941a7abc5ba3f8cc61,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -24.999985
+      value: -24.999939
       objectReference: {fileID: 0}
     - target: {fileID: 4632787956398007030, guid: 12b10642e2f7af941a7abc5ba3f8cc61,
         type: 3}
@@ -16688,7 +16688,7 @@ Transform:
   - {fileID: 277001827}
   - {fileID: 212865928}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &887777632
 GameObject:
@@ -18844,7 +18844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded7885a37d650845a7a765c8c310415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NEXT_LEVEL: Scenes/LvlSelect
+  NEXT_LEVEL: Scenes/Lvl6
 --- !u!61 &1236662233
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28348,7 +28348,7 @@ RectTransform:
   m_Children:
   - {fileID: 1190156572}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

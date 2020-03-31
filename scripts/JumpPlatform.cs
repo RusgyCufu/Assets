@@ -17,6 +17,11 @@ public class JumpPlatform : MonoBehaviour
         {
             main.GetComponent<CharacterController2D>().Jump(force);
         }
+        else
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0f, force));
+            Debug.Log(collision.gameObject);
+        }
     }
 }
 
