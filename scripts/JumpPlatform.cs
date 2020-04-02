@@ -5,6 +5,7 @@ using UnityEngine;
 public class JumpPlatform : MonoBehaviour
 {
     [Range(1000f, 8000f)] public float force = 2500f;
+    [Range(1000f, 100000f)] public float forceForOthers = 2500f;
     private GameObject main;
 
     void Start()
@@ -16,11 +17,16 @@ public class JumpPlatform : MonoBehaviour
         if (collision == main.GetComponent<CapsuleCollider2D>())
         {
             main.GetComponent<CharacterController2D>().Jump(force);
+            main.GetComponent<CharacterController2D>().jumpsLeft = main.GetComponent<CharacterController2D>().maxJumpCount;
         }
         else
         {
-            collision.gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0f, force));
-            Debug.Log(collision.gameObject);
+            Rigidbody2D m_Rigidbody2D = collision.gameObject.GetComponent<Rigidbody2D>();
+            Vector3 curVelocity = m_Rigidbody2D.velocity;
+            curVelocity.y = 0;
+            m_Rigidbody2D.velocity = curVelocity;
+            m_Rigidbody2D.AddRelativeForce(new Vector2(0f, forceForOthers));
+            //Debug.Log(collision.gameObject);
         }
     }
 }

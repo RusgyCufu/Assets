@@ -59,6 +59,10 @@ public class st_menu : MonoBehaviour
         PlayerPrefs.SetInt("Language", lang);
         ResetScene();
     }
+    public void openURL(string url)
+    {
+        Application.OpenURL(url);
+    }
     public void Exit()
     {
         //UnityEditor.EditorApplication.isPlaying = false;
