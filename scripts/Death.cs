@@ -27,7 +27,7 @@ public class Death : MonoBehaviour
         
     void Start()
     {
-        main = (GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0);
+        main = GameObject.FindGameObjectWithTag("main");
         restartScreen = (GameObject)GameObject.FindGameObjectsWithTag("Restart").GetValue(0);
         if (hide)
         {

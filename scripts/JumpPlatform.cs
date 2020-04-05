@@ -10,7 +10,7 @@ public class JumpPlatform : MonoBehaviour
 
     void Start()
     {
-        main = (GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0);
+        main = GameObject.FindGameObjectWithTag("main");
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,5 +29,6 @@ public class JumpPlatform : MonoBehaviour
             //Debug.Log(collision.gameObject);
         }
     }
+
 }
 

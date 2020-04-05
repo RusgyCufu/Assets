@@ -42,13 +42,14 @@ public class CameraFollow : MonoBehaviour
 	void Start()
 	{
 		rootPos = transform.position.x;
-		target = (GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0);
+		target = GameObject.FindGameObjectWithTag("main");
 		if (useDefaults)
 		{
 			smoothSpeed = 0.1f;
 			lookOffset = new Vector3(5, 3, -25);
 			flipOffset = 3;
 		}
+		//ResetPos(GameObject.FindGameObjectWithTag("main").GetComponent<main_script>().resp.GetComponent<checkpoint_script>().lookDirection);
 	}
 
 	void LateUpdate()
