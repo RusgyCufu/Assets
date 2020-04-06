@@ -9,7 +9,7 @@ public class Water : MonoBehaviour
 
     void Start()
     {
-        main = (GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0);
+        main = GameObject.FindGameObjectWithTag("main");
     }
     private void OnTriggerStay2D(Collider2D collision)
     {

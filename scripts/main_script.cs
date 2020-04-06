@@ -36,7 +36,7 @@ public class main_script : MonoBehaviour
             deathEvent.Invoke();
         if (respawnPoint.GetComponent<checkpoint_script>().doCam)
         {
-            ((GameObject)GameObject.FindGameObjectsWithTag("MainCamera").GetValue(0)).GetComponent<CameraFollow>().ResetPos(respawnPoint.GetComponent<checkpoint_script>().lookDirection);
+            (GameObject.FindGameObjectWithTag("MainCamera")).GetComponent<CameraFollow>().ResetPos(respawnPoint.GetComponent<checkpoint_script>().lookDirection);
         }
     }
     void Start()
