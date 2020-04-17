@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ForceCamOffset : MonoBehaviour
 {
+    [SerializeField] Transform target = null;
     [SerializeField] public bool left;
     [SerializeField] public bool center;
     [SerializeField] public bool right;
@@ -23,6 +24,10 @@ public class ForceCamOffset : MonoBehaviour
     {
         main = (GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0);
         cam = ((GameObject)GameObject.FindGameObjectsWithTag("MainCamera").GetValue(0)).GetComponent<CameraFollow>();
+        if (target)
+        {
+            pos = target.position;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
