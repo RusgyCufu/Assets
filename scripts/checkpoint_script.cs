@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class checkpoint_script : MonoBehaviour
 {
     //[SerializeField] private Transform player;
     private main_script main;
+    [SerializeField] public bool dontOpen = false;
     [SerializeField] public bool doCam = true;
     [SerializeField] public bool lookDirection = true;
     [SerializeField] private SpriteRenderer sprite;
@@ -28,9 +30,12 @@ public class checkpoint_script : MonoBehaviour
         {
             if (!open)
             {
-                sprite.sprite = newSprite;
                 main.resp = this.gameObject;
-                open = true;
+                if (dontOpen == false)
+                {
+                    open = true;
+                    sprite.sprite = newSprite;
+                }
                 AudioManager.AudioManager.m_instance.PlaySFX("Checkpoint");
 
                 for (int j = 0; j < main.checkpoints.Length; ++j)
@@ -38,7 +43,7 @@ public class checkpoint_script : MonoBehaviour
                     var i = main.GetComponent<main_script>().checkpoints[j];
                     if (i == this.gameObject)
                     {
-                        PlayerPrefs.SetInt("CheckpointIndex", j);
+                        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "CheckpointIndex", j);
                     }
                 }
             }

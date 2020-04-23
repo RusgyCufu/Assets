@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class main_script : MonoBehaviour
 {
@@ -52,7 +53,7 @@ public class main_script : MonoBehaviour
 
         if (debug == false)
         {
-            respawn(checkpoints[PlayerPrefs.GetInt("CheckpointIndex")]);
+            respawn(checkpoints[PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "CheckpointIndex")]);
         }
     }
 }

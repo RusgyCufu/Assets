@@ -295,7 +295,7 @@ MonoBehaviour:
   EN: 'Here
 
     |'
-  RU: "\u0421\u0434\u0435\u0441\u044C\n|"
+  RU: "\u0417\u0434\u0435\u0441\u044C\n|"
 --- !u!1 &194464311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1370791496558655478, guid: 78bfa84b8bd4f1d45adf3327f428173e,
