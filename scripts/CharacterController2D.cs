@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
 {
+	[SerializeField] bool invertFlip;
 	[SerializeField] private float m_JumpForce = 800f;                          // Amount of force added when the player jumps.
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;          // Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .1f;  // How much to smooth out the movement
@@ -89,6 +90,7 @@ public class CharacterController2D : MonoBehaviour
 			phantom.transform.parent = null;
 		}
 	}
+
 	public void Move(float move, bool crouch, bool jump)
 	{
 		if (m_Grounded && wasGrounded)
@@ -163,5 +165,12 @@ public class CharacterController2D : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 		phantom.GetComponent<Phantom>().flip = !phantom.GetComponent<Phantom>().flip;
+	}
+	private void Start()
+	{
+		if (invertFlip)
+		{
+			phantom.GetComponent<Phantom>().flip = !phantom.GetComponent<Phantom>().flip;
+		}
 	}
 }

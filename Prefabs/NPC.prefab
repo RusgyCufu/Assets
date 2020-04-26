@@ -50,6 +50,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -191,6 +193,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -290,22 +294,39 @@ MonoBehaviour:
   - nice try
   - now i len you go fuck yourself
   - GO AWAY STUPID RETARD!!!!!!!!
-  - '...'
+  - ...
   - END
   - WHAT?????????
   - Fuck YOU
   - RETARD
   - go fuck yourself, motherfucker
   - '[;0'
-  - '...'
+  - ...
   - END
   charSound: DefaultCharSound
-  EN: []
+  EN:
+  - '{;2;1;Buy ITEM for 228 coins;Cancel'
+  - END
+  - '[;0'
+  - ------
+  - Congratulations on your successful purchase!
+  - END
+  - ----------
+  - Not enough coins :(
+  - END
+  - ---------
+  - Sorry, but you can buy this item only once. And guess what? You already bought
+    it :)
+  - END
+  - END
+  - END
+  - END
   RU: []
   events:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
         m_MethodName: ActiveLift
         m_Mode: 1
         m_Arguments:

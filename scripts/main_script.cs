@@ -7,12 +7,15 @@ using UnityEngine.SceneManagement;
 public class main_script : MonoBehaviour
 {
     [SerializeField] public bool debug = true;
+    [SerializeField] public Sprite[] skins;
+    [SerializeField] public int skinID;
     [SerializeField] public Transform player;
     [SerializeField] public GameObject resp;
 
     [SerializeField] public GameObject[] checkpoints;
     [SerializeField] public int coins;
     [SerializeField] UnityEvent deathEvent;
+
 
     void RewriteCoins()
     {
@@ -40,8 +43,16 @@ public class main_script : MonoBehaviour
             (GameObject.FindGameObjectWithTag("MainCamera")).GetComponent<CameraFollow>().ResetPos(respawnPoint.GetComponent<checkpoint_script>().lookDirection);
         }
     }
+    public void ChangeSkin(int id)
+    {
+        skinID = id;
+        PlayerPrefs.SetInt("active_skin", id);
+        GetComponent<SpriteRenderer>().sprite = skins[skinID];
+        GameObject.FindGameObjectWithTag("Phantom").GetComponent<SpriteRenderer>().sprite = skins[skinID];
+    }
     void Start()
     {
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "unlock", 1);
         if (PlayerPrefs.HasKey("Coins") == false)
         {
             PlayerPrefs.SetInt("Coins", 0);
@@ -55,5 +66,6 @@ public class main_script : MonoBehaviour
         {
             respawn(checkpoints[PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "CheckpointIndex")]);
         }
+        ChangeSkin(PlayerPrefs.GetInt("active_skin"));
     }
 }

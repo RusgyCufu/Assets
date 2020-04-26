@@ -691,7 +691,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1794168439554563029, guid: 159b75e530b86b649b9a8f312e46919a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 159b75e530b86b649b9a8f312e46919a, type: 3}
 --- !u!1 &1021712144
 GameObject:
@@ -3676,7 +3677,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 107.8
+  m_fontSize: 108.65
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

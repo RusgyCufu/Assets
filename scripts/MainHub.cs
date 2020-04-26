@@ -14,6 +14,11 @@ public class MainHub : MonoBehaviour
         }
     }
 
+    void GiveSkin(int n)
+    {
+        PlayerPrefs.SetInt("unlock_skin" + n.ToString(), 1);
+        main.GetComponent<main_script>().ChangeSkin(n);
+    }
     // Update is called once per frame
     void Update()
     {

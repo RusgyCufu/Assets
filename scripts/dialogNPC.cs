@@ -34,7 +34,7 @@ public class dialogNPC : MonoBehaviour
     public void tryDialog()
     {
         Debug.Log("OMG, main object r going to talk with " + this.name);
-        GameObject dialogUi = (GameObject)GameObject.FindGameObjectsWithTag("dialogUi").GetValue(0);
+        GameObject dialogUi = GameObject.FindGameObjectWithTag("dialogUi");
         dialogUi.GetComponent<Canvas>().enabled = true;
         Debug.Log(dialogUi);
         dialogUi.GetComponent<dialog>().NewDialog(this);
