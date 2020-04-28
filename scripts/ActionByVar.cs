@@ -10,7 +10,7 @@ public class ActionByVar : MonoBehaviour
         [SerializeField] bool doUpdate;
     [Header("Bool Action")]
         [SerializeField] bool doByBool;
-        [SerializeField] string boolName;
+        [SerializeField] public string boolName;
         [SerializeField] UnityEvent onTrue;
         [SerializeField] UnityEvent onFalse;
 

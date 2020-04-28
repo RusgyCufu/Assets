@@ -283,11 +283,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   skins:
-  - {fileID: 21300000, guid: 0aa296e20281cee46b692c4297e9ed9d, type: 3}
-  - {fileID: 21300000, guid: 23c2a95d4341c4e468cd262508eb671e, type: 3}
-  - {fileID: 21300000, guid: 2e55ee6d5f5cb0240881fe8cce268c55, type: 3}
-  - {fileID: 21300000, guid: 1e5127abc6953a445a10ab511483421c, type: 3}
-  - {fileID: 21300000, guid: 0b9e8c56cb1d93642b27f7c01426452a, type: 3}
+  - {fileID: 21300000, guid: 9d4f196fd6c0be740b8bb0013bb2be33, type: 3}
+  - {fileID: 21300000, guid: bced14481d5a38a4681d35433decf1a9, type: 3}
+  - {fileID: 21300000, guid: cb1a11c36b33d4243bce7bbf3e857bd8, type: 3}
+  - {fileID: 21300000, guid: c3bd4d5429b73744e941df45ba921e70, type: 3}
+  - {fileID: 21300000, guid: a322e16a8c8117848867c7c63245f6a1, type: 3}
+  - {fileID: 21300000, guid: 67133582a540ae34e9f247c6612d2be1, type: 3}
   skinID: 0
   player: {fileID: 1695927482924189747}
   resp: {fileID: 0}

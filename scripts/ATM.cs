@@ -14,7 +14,24 @@ public class ATM : MonoBehaviour
     public int flagNotEnoughMoney = 10;
     public int GOVNo = 10;
     public TMPro.TextMeshProUGUI text;
+    [Header("forSkins")]
+        public bool useForSkins = false;
+        public int skinID = 0;
+        public GameObject mainATM;
 
+    GameObject GetChildWithName(GameObject obj, string name)
+    {
+        Transform trans = obj.transform;
+        Transform childTrans = trans.Find(name);
+        if (childTrans != null)
+        {
+            return childTrans.gameObject;
+        }
+        else
+        {
+            return null;
+        }
+    }
     public void Buy()
     {
         int coins = main.GetComponent<main_script>().coins;
@@ -23,6 +40,11 @@ public class ATM : MonoBehaviour
             main.GetComponent<main_script>().coins -= value;
             if (doOnBuy != null)
             {
+                if (useForSkins)
+                {
+                    GetComponent<ActionByVar>().SetName("unlock_skin" + skinID.ToString());
+                    GetComponent<ActionByVar>().SetBool(1);
+                }
                 doOnBuy.Invoke();
             }
             if (buyOnce)
@@ -43,11 +65,26 @@ public class ATM : MonoBehaviour
         dia.Display();
     }
 
+    public void SetSkin()
+    {
+        if (PlayerPrefs.GetInt("unlock_skin" + skinID.ToString()) != 0)
+        {
+            main.GetComponent<main_script>().ChangeSkin(skinID);
+        }
+    }
     private void Start()
     {
         main = GameObject.FindGameObjectWithTag("main");
         dia = GameObject.FindGameObjectWithTag("dialogUi").GetComponent<dialog>();
         text.SetText(value.ToString());
+        if (useForSkins)
+        {
+            GetChildWithName(GetChildWithName(mainATM, "Canvas"), "Text").GetComponent<ActionByVar>().boolName = "unlock_skin" + skinID.ToString();
+            GetComponent<ActionByVar>().boolName = "unlock_skin" + skinID.ToString();
+            GetChildWithName(mainATM, "Sprite").GetComponent<SpriteRenderer>().sprite = main.GetComponent<main_script>().skins[skinID];
+            GetChildWithName(mainATM, "SpriteB").GetComponent<SpriteRenderer>().sprite = main.GetComponent<main_script>().skins[skinID];
+            GetChildWithName(mainATM, "Sprite").GetComponent<ActionByVar>().boolName = "unlock_skin" + skinID.ToString();
+        }
     }
     // Update is called once per frame
     void Update()

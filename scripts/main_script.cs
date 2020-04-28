@@ -45,13 +45,16 @@ public class main_script : MonoBehaviour
     }
     public void ChangeSkin(int id)
     {
+        Debug.Log(id);
         skinID = id;
         PlayerPrefs.SetInt("active_skin", id);
         GetComponent<SpriteRenderer>().sprite = skins[skinID];
         GameObject.FindGameObjectWithTag("Phantom").GetComponent<SpriteRenderer>().sprite = skins[skinID];
+        Debug.Log(id);
     }
     void Start()
     {
+        ChangeSkin(PlayerPrefs.GetInt("active_skin"));
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "unlock", 1);
         if (PlayerPrefs.HasKey("Coins") == false)
         {
@@ -66,6 +69,6 @@ public class main_script : MonoBehaviour
         {
             respawn(checkpoints[PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "CheckpointIndex")]);
         }
-        ChangeSkin(PlayerPrefs.GetInt("active_skin"));
+        
     }
 }
