@@ -79,6 +79,9 @@ public class ATM : MonoBehaviour
         text.SetText(value.ToString());
         if (useForSkins)
         {
+            GetChildWithName(GetChildWithName(mainATM, "Canvas1"), "SkinName").GetComponent<TextLocalization>().RU = main.GetComponent<main_script>().skinNamesRU[skinID];
+            GetChildWithName(GetChildWithName(mainATM, "Canvas1"), "SkinName").GetComponent<TextLocalization>().EN = main.GetComponent<main_script>().skinNamesEN[skinID];
+            GetChildWithName(GetChildWithName(mainATM, "Canvas1"), "SkinName").GetComponent<TextLocalization>().Refresh();
             GetChildWithName(GetChildWithName(mainATM, "Canvas"), "Text").GetComponent<ActionByVar>().boolName = "unlock_skin" + skinID.ToString();
             GetComponent<ActionByVar>().boolName = "unlock_skin" + skinID.ToString();
             GetChildWithName(mainATM, "Sprite").GetComponent<SpriteRenderer>().sprite = main.GetComponent<main_script>().skins[skinID];

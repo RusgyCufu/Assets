@@ -7,14 +7,20 @@ using UnityEngine.SceneManagement;
 public class main_script : MonoBehaviour
 {
     [SerializeField] public bool debug = true;
-    [SerializeField] public Sprite[] skins;
-    [SerializeField] public int skinID;
-    [SerializeField] public Transform player;
-    [SerializeField] public GameObject resp;
+    
+    [Header ("skins")]
+        [SerializeField] public Sprite[] skins;
+        [SerializeField] public int skinID;
+        [SerializeField] public string[] skinNamesEN;
+        [SerializeField] public string[] skinNamesRU;
+    
 
-    [SerializeField] public GameObject[] checkpoints;
-    [SerializeField] public int coins;
-    [SerializeField] UnityEvent deathEvent;
+    [Header("Other")]
+        [SerializeField] public Transform player;
+        [HideInInspector] public GameObject resp;
+        [SerializeField] public GameObject[] checkpoints;
+        [SerializeField] public int coins;
+        [SerializeField] UnityEvent deathEvent;
 
 
     void RewriteCoins()

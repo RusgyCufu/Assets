@@ -289,7 +289,31 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c3bd4d5429b73744e941df45ba921e70, type: 3}
   - {fileID: 21300000, guid: a322e16a8c8117848867c7c63245f6a1, type: 3}
   - {fileID: 21300000, guid: 67133582a540ae34e9f247c6612d2be1, type: 3}
+  - {fileID: 21300000, guid: 8d0cf95dea1a90a40b32f48b734046a7, type: 3}
+  - {fileID: 21300000, guid: 8c7eb86630ff986418d8dc1ac088a9c4, type: 3}
   skinID: 0
+  skinNamesEN:
+  - Regular
+  - Inverted
+  - Chess
+  - Black ghost
+  - White ghost
+  - I hate this game
+  - VOID
+  - Vporwave
+  - 
+  - 
+  skinNamesRU:
+  - "\u0421\u0442\u0430\u043D\u0434\u0430\u0440\u0442\u043D\u044B\u0439"
+  - "\u0418\u043D\u0432\u0435\u0440\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439"
+  - "\u0428\u0430\u0445\u043C\u0430\u0442\u044B"
+  - "\u0427\u0451\u0440\u043D\u044B\u0439 \u043F\u0440\u0438\u0437\u0440\u0430\u043A"
+  - "\u0411\u0435\u043B\u044B\u0439 \u043F\u0440\u0438\u0437\u0440\u0430\u043A"
+  - "\u042F \u043D\u0435\u043D\u0430\u0432\u0438\u0436\u0443 \u044D\u0442\u0443 \u0438\u0433\u0440\u0443"
+  - "\u041F\u041E\u0421\u0422\u041E\u0422\u0410"
+  - Vporwave
+  - 
+  - 
   player: {fileID: 1695927482924189747}
   resp: {fileID: 0}
   checkpoints: []
