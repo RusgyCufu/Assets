@@ -8,7 +8,7 @@ public class dialog : MonoBehaviour
 
     private Canvas simpleUi;
     private Canvas sequenceUi;
-    private int dialogPointer;
+    public int dialogPointer;
 
     GameObject GetChildWithName(GameObject obj, string name)
     {
@@ -94,7 +94,7 @@ public class dialog : MonoBehaviour
             GetComponent<Canvas>().transform.localScale = new Vector3(0, 0, 0);
             GetComponent<Canvas>().enabled = false;
 
-            CameraFollow cam = ((GameObject)GameObject.FindGameObjectsWithTag("MainCamera").GetValue(0)).GetComponent<CameraFollow>();
+            CameraFollow cam = (GameObject.FindGameObjectWithTag("MainCamera")).GetComponent<CameraFollow>();
             cam.doForcePosDialog = false;
         }
         else

@@ -2,16 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class main_script : MonoBehaviour
 {
     [SerializeField] public bool debug = true;
-    [SerializeField] public Transform player;
-    [SerializeField] public GameObject resp;
+    
+    [Header ("skins")]
+        [SerializeField] public Sprite[] skins;
+        [SerializeField] public int skinID;
+        [SerializeField] public string[] skinNamesEN;
+        [SerializeField] public string[] skinNamesRU;
+    
 
-    [SerializeField] public GameObject[] checkpoints;
-    [SerializeField] public int coins;
-    [SerializeField] UnityEvent deathEvent;
+    [Header("Other")]
+        [SerializeField] public Transform player;
+        [HideInInspector] public GameObject resp;
+        [SerializeField] public GameObject[] checkpoints;
+        [SerializeField] public int coins;
+        [SerializeField] UnityEvent deathEvent;
+
 
     void RewriteCoins()
     {
@@ -39,8 +49,19 @@ public class main_script : MonoBehaviour
             (GameObject.FindGameObjectWithTag("MainCamera")).GetComponent<CameraFollow>().ResetPos(respawnPoint.GetComponent<checkpoint_script>().lookDirection);
         }
     }
+    public void ChangeSkin(int id)
+    {
+        Debug.Log(id);
+        skinID = id;
+        PlayerPrefs.SetInt("active_skin", id);
+        GetComponent<SpriteRenderer>().sprite = skins[skinID];
+        GameObject.FindGameObjectWithTag("Phantom").GetComponent<SpriteRenderer>().sprite = skins[skinID];
+        Debug.Log(id);
+    }
     void Start()
     {
+        ChangeSkin(PlayerPrefs.GetInt("active_skin"));
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "unlock", 1);
         if (PlayerPrefs.HasKey("Coins") == false)
         {
             PlayerPrefs.SetInt("Coins", 0);
@@ -52,7 +73,8 @@ public class main_script : MonoBehaviour
 
         if (debug == false)
         {
-            respawn(checkpoints[PlayerPrefs.GetInt("CheckpointIndex")]);
+            respawn(checkpoints[PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "CheckpointIndex")]);
         }
+        
     }
 }

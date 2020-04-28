@@ -25,7 +25,7 @@ public class Phantom : MonoBehaviour
     void Update()
     {
         Vector3 targetPos = main.transform.position;
-        targetPos += (Vector3)(main.GetComponent<Rigidbody2D>().velocity * VALUE_SPEED);
+        targetPos += (Vector3)(main.GetComponent<Rigidbody2D>().velocity * VALUE_SPEED * 60f * Time.deltaTime);
         Vector3 newPos = Vector3.Lerp(transform.position, targetPos, VALUE);
 
         if (constY)

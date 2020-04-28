@@ -27,6 +27,7 @@ public class Lvl3 : MonoBehaviour
         activateEffect = true;
         GameObject main = (GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0);
         main.GetComponent<CharacterController2D>().maxJumpCount = 2;
+        PlayerPrefs.SetInt("CanDoubleJump", 1);
     }
 
     private void Update()

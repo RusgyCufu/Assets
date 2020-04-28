@@ -9,23 +9,28 @@ public class TextLocalization : MonoBehaviour
 
     private int language = 0;
 
-    void SetText(string text)
-    {
-        this.gameObject.GetComponent<TMPro.TextMeshProUGUI>().SetText(text);
-    }
-    void Start()
+    public void Refresh()
     {
         if (PlayerPrefs.HasKey("Language"))
             language = PlayerPrefs.GetInt("Language");
         else
             PlayerPrefs.SetInt("Language", 0);
 
-        if(language == 1)
+        if (language == 1)
         {
             SetText(RU);
-        }else
+        }
+        else
         {
             SetText(EN);
         }
+    }
+    void SetText(string text)
+    {
+        this.gameObject.GetComponent<TMPro.TextMeshProUGUI>().SetText(text);
+    }
+    void Start()
+    {
+        Refresh();
     }
 }

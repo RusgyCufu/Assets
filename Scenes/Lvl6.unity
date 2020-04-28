@@ -1312,7 +1312,7 @@ PrefabInstance:
     - target: {fileID: 3100960423915274732, guid: 12b10642e2f7af941a7abc5ba3f8cc61,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -258.06
+      value: -230.408
       objectReference: {fileID: 0}
     - target: {fileID: 3100960423915274732, guid: 12b10642e2f7af941a7abc5ba3f8cc61,
         type: 3}
@@ -2756,17 +2756,17 @@ PrefabInstance:
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.size
-      value: 43
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.size
-      value: 43
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: events.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
@@ -2791,272 +2791,251 @@ PrefabInstance:
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[0]
-      value: "Bonjour, \u0440\u043E\u0431\u043E\u0442!"
+      value: "\u041F\u0440\u0438\u0432\u0435\u0442."
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[1]
-      value: "\u0418\u0437\u0432\u0438\u043D\u0438, \u043D\u043E \u043D\u0430 \u043F\u0440\u043E\u0448\u043B\u043E\u043C
-        \u0443\u0440\u043E\u0432\u043D\u0435 \u044F \u043D\u0435 \u043C\u043E\u0433
-        \u0441 \u0442\u043E\u0431\u043E\u0439 \u043F\u043E\u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C
-        \u0442\u0430\u043A \u043A\u0430\u043A \u044F \u0437\u0430\u0431\u044B\u043B
-        \u043A\u043E\u0434\u044B \u0434\u043B\u044F \u0442\u0435\u043B\u0435\u043F\u043E\u0440\u0442\u0430\u0446\u0438\u0438
-        \u043D\u0430 \u043D\u0435\u0433\u043E"
+      value: "\u0417\u0430\u0440\u0430\u043D\u0435\u0435 \u0445\u043E\u0447\u0443
+        \u0438\u0437\u0432\u0438\u043D\u0438\u0442\u044C\u0441\u044F \u0437\u0430
+        \u0442\u043E, \u0447\u0442\u043E \u043D\u0430 \u044D\u0442\u043E\u043C \u0443\u0440\u043E\u0432\u043D\u0435
+        \u043D\u0435\u0442\u0443 \u0441\u0432\u0435\u0442\u0430"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[2]
-      value: "\u0418 \u0442\u0435\u043F\u0435\u0440\u044C \u043C\u043D\u0435 \u043D\u0443\u0436\u043D\u043E
-        \u0432\u0440\u0443\u0447\u043D\u0443\u044E \u043F\u0435\u0440\u0435\u0431\u0440\u0430\u0442\u044C
-        999999999 \u043A\u043E\u043C\u0431\u0438\u043D\u0430\u0446\u0438\u0439 \u0447\u0442\u043E\u0431\u044B
-        \u0432\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u0438\u0445"
+      value: "\u0412\u0438\u0434\u0438\u0448\u044C \u043B\u0438\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[3]
-      value: "\u0425\u043E\u0442\u044C \u044F \u0438 \u043F\u0435\u0440\u0435\u0431\u0440\u0430\u043B
-        \u0443\u0436\u0435 1234 \u043A\u043E\u043C\u0431\u0438\u043D\u0430\u0446\u0438\u0439,
-        \u0432\u0441\u0451 \u0440\u0430\u0432\u043D\u043E \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C
-        \u043E\u0447\u0435\u043D\u044C \u043C\u043D\u043E\u0433\u043E"
+      value: "\u042D\u0442\u043E\u0442 \u0443\u0440\u043E\u0432\u0435\u043D\u044C
+        \u044F \u0445\u043E\u0442\u0435\u043B \u0441\u0434\u0435\u043B\u0430\u0442\u044C
+        \u0432 \u043F\u0435\u0449\u0435\u0440\u0435 "
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[4]
-      value: "\u0425\u043E\u0440\u043E\u0448\u043E, \u0447\u0442\u043E \u0441 \u044D\u0442\u0438\u043C
-        \u0443\u0440\u043E\u0432\u043D\u0435\u043C \u043D\u0435 \u0431\u044B\u043B\u043E
-        \u043F\u0440\u043E\u0431\u043B\u0435\u043C"
+      value: "\u041D\u043E \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u0430 \u043F\u0435\u0449\u0435\u0440
+        \u0432 \u0442\u043E\u043C, \u0447\u0442\u043E \u043E\u043D\u0438 \u043D\u0430\u0445\u043E\u0434\u044F\u0442\u0441\u044F
+        \u0433\u043B\u0443\u0431\u043E\u043A\u043E \u043F\u043E\u0434 \u0437\u0435\u043C\u043B\u0451\u0439"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[5]
-      value: "\u041D\u0443 \u0442\u0430\u043A \u0447\u0442\u043E, \u0442\u0435\u0431\u0435
-        \u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F \u0434\u0432\u043E\u0439\u043D\u043E\u0439
-        \u043F\u0440\u044B\u0436\u043E\u043A?"
+      value: "\u0410 \u0437\u043D\u0430\u0447\u0438\u0442, \u0447\u0442\u043E \u0438
+        \u0441\u0432\u0435\u0442\u0430 \u0442\u0430\u043C \u043D\u0435\u0442\u0443"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[6]
-      value: "{;7;15;\u0422\u043E\u0442 \u0442\u0440\u0435\u0443\u0433\u043E\u043B\u044C\u043D\u0438\u043A
-        \u0442\u0432\u043E\u0438\u0445 \u0440\u0443\u043A \u0434\u0435\u043B\u043E?;\u041E\u0442
-        \u0441\u044E\u0440\u043F\u0440\u0438\u0437\u0430 \u044F \u043E\u0436\u0438\u0434\u0430\u043B
-        \u0447\u0435\u0433\u043E-\u0442\u043E \u0431\u043E\u043B\u044C\u0448\u0435\u0433\u043E..."
+      value: "\u041D\u043E \u0432\u0441\u043F\u043E\u043C\u043D\u0438\u043B \u044F
+        \u043F\u0440\u043E \u044D\u0442\u0443 \u043E\u0441\u043E\u0431\u0435\u043D\u043D\u043E\u0441\u0442\u044C,
+        \u0442\u043E\u043B\u044C\u043A\u043E \u043A\u043E\u0433\u0434\u0430 \u0443\u0436\u0435
+        \u0441\u0434\u0435\u043B\u0430\u043B \u0435\u0433\u043E"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[7]
-      value: "\u041D\u0430\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043C\u043D\u0435
-        \u0438\u0437\u0432\u0435\u0441\u0442\u043D\u043E, \u0432 \u044D\u0442\u043E\u043C
-        \u043C\u0438\u0440\u0435 \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C
-        \u0442\u0440\u0435\u0443\u0433\u043E\u043B\u044C\u043D\u0438\u043A\u043E\u0432"
+      value: "\u0418 \u0447\u0442\u043E \u0431\u044B \u0442\u044B \u043D\u0435 \u0440\u0430\u0441\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u043B\u0441\u044F
+        \u0432\u043E\u0442 \u0442\u0435\u0431\u0435 \u0441\u043E\u0432\u0435\u0442:"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[8]
-      value: "\u0418\u0445 \u0437\u0430\u043F\u0440\u0435\u0442\u0438\u043B\u0438
-        \u043F\u043E\u0447\u0442\u0438 \u0432 \u043F\u043E\u043B\u043E\u0432\u0438\u043D\u0435
-        \u043F\u043B\u0430\u043D\u0435\u0442\u0430\u0440\u043D\u044B\u0445 \u0441\u0438\u0441\u0442\u0435\u043C
-        \u0435\u0449\u0435 420 \u043B\u0435\u0442 \u043D\u0430\u0437\u0430\u0434"
+      value: "\u0427\u0442\u043E \u0431\u044B \u043B\u0435\u0433\u0447\u0435 \u043F\u0440\u043E\u0439\u0442\u0438
+        \u044D\u0442\u043E\u0442 \u0443\u0440\u043E\u0432\u0435\u043D\u044C \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439
+        \u0437\u0430\u043F\u043E\u043C\u0438\u043D\u0430\u0442\u044C, \u043A\u043E\u0433\u0434\u0430
+        \u0442\u0435\u0431\u0435 \u043D\u0443\u0436\u043D\u043E \u043F\u0440\u044B\u0433\u0430\u0442\u044C
+        \ "
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[9]
-      value: "\u0418\u043C\u0435\u043D\u043D\u043E \u043F\u043E\u044D\u0442\u043E\u043C\u0443
-        \u0437\u0434\u0435\u0441\u044C \u0432\u0441\u0451 \u0438 \u0441\u043E\u0441\u0442\u043E\u0438\u0442
-        \u0438\u0437 \u043A\u0432\u0430\u0434\u0440\u0430\u0442\u043E\u0432"
+      value: "\u0412\u043E\u0442."
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[10]
-      value: "\u0418 \u0432\u043E\u043E\u0431\u0449\u0435 \u0432 \u0442\u0432\u043E\u0451
-        \u044F\u0434\u0440\u043E \u044F \u043D\u0438 \u0434\u043E\u0431\u0430\u0432\u043B\u044F\u043B
-        \u043D\u0435 \u043E\u0434\u043D\u043E\u0433\u043E \u0443\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u044F
-        \u043E \u043A\u0430\u043A\u0438\u0445-\u043B\u0438\u0431\u043E \u0442\u0440\u0435\u0443\u0433\u043E\u043B\u044C\u043D\u0438\u043A\u0430\u0445"
+      value: "\u041E, \u0432\u0441\u043F\u043E\u043C\u043D\u0438\u043B"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[11]
-      value: "\u0421\u0442\u0440\u0430\u043D\u043D\u043E..."
+      value: "\u0421\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C
+        \u0431\u0443\u0434\u0435\u0442 \u043F\u043E\u0438\u0441\u0442\u0438\u043D\u0435
+        \u043A\u043E\u0448\u043C\u0430\u0440\u043D\u044B\u043C"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[12]
-      value: "\u041D\u043E \u043D\u0430 \u0432\u0441\u044F\u043A\u0438\u0439 \u0441\u043B\u0443\u0447\u0430\u0439
-        \u044F \u0432\u0441\u0451-\u0442\u0430\u043A\u0438 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u044E
-        \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C \u043E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u0435
-        999998765 \u043A\u043E\u043C\u0431\u0438\u043D\u0430\u0446\u0438\u0439, \u0447\u0442\u043E\u0431\u044B
-        \u043F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C \u0442\u043E\u0442
-        \u0443\u0440\u043E\u0432\u0435\u043D\u044C"
+      value: "\u041F\u043E\u043A\u0430 \u0447\u0442\u043E \u044D\u0442\u043E \u0441\u0430\u043C\u044B\u0439
+        \u0441\u043B\u043E\u0436\u043D\u044B\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C,
+        \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u044F \u043A\u043E\u0433\u0434\u0430-\u043B\u0438\u0431\u043E
+        \u0434\u0435\u043B\u0430\u043B"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[13]
-      value: "\u041D\u0443 \u0430 \u0434\u0432\u043E\u0439\u043D\u043E\u0439 \u043F\u0440\u044B\u0436\u043E\u043A
-        \u0442\u0435\u0431\u0435 \u043F\u043E\u043D\u0440\u0430\u0432\u0438\u043B\u0441\u044F?"
+      value: "\u041D\u043E \u043D\u0430\u0434\u0435\u044E\u0441\u044C, \u0447\u0442\u043E
+        \u0442\u0435\u0431\u0435 \u043F\u043E\u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[14]
-      value: "{;15;31;\u041E\u0442 \u0441\u044E\u0440\u043F\u0440\u0438\u0437\u0430
-        \u044F \u043E\u0436\u0438\u0434\u0430\u043B \u0447\u0435\u0433\u043E-\u0442\u043E
-        \u0431\u043E\u043B\u044C\u0448\u0435\u0433\u043E...;\u041D\u0435\u043F\u043B\u043E\u0445\u043E\u0435
-        \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435"
+      value: "\u0413\u043E\u0442\u043E\u0432\u044C\u0441\u044F \u0438\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[15]
-      value: '[;1'
+      value: "\u0423\u0434\u0430\u0447\u0438!"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[16]
-      value: "\u0417\u043D\u0430\u0435\u0448\u044C \u0447\u0442\u043E..."
+      value: '[;0'
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[17]
-      value: "\u042F \u0442\u0443\u0442 \u0434\u043B\u044F \u0442\u0435\u0431\u044F
-        \u0441\u0442\u0430\u0440\u0430\u044E\u0441\u044C..."
+      value: END
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[18]
-      value: "\u0410 \u0442\u044B..."
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[19]
-      value: '[;2'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[0]
-      value: Bonjour, robot!
+      value: Hi.
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[1]
-      value: I'm sorry, but I couldn't talk to you at the last level because I forgot
-        the codes to teleport to it
+      value: I want to apologize in advance for the fact that there is no light at
+        this level
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[2]
-      value: And now I need to manually go through 999999999 combinations to restore
-        them
+      value: "You see\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[3]
-      value: Although I have already gone through 1234 combinations, but there are
-        still a lot of work
+      value: This level I wanted to do in a cave
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[4]
-      value: It's good that there were no problems with this level
+      value: But the problem with caves is that they are deep underground
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[5]
-      value: So, do you like the double jump?
+      value: It means that there is no light there
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[6]
-      value: '{;7;15;Is that triangle your work?;I expected something more from the
-        surprise...'
+      value: But I only remembered about this feature when I had already made it
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[7]
-      value: As I know, there is no triangles in this world
+      value: 'And whatever you''re upset about here''s a tip:'
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[8]
-      value: They were banned in almost half of the planetary systems 420 years ago
+      value: To make it easier to pass this level, try to remember when you need to
+        jump
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[9]
-      value: That's why everything here is made up of squares
+      value: Like so.
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[10]
-      value: And in General, I didn 't add any mention of any triangles to your core
+      value: Oh, I remember
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[11]
-      value: Weird...
+      value: The next level will be truly nightmarish
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[12]
-      value: But just in case I still try to use the other 999998765 combinations
-        to check that level
+      value: So far, this is the most difficult level I've ever done
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[13]
-      value: By the way, did you like the double jump?
+      value: But I hope you'll like it
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[14]
-      value: '{;15;31;I expected something more from the surprise...;A good improvement'
+      value: "Get ready and\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[15]
-      value: '[;1'
+      value: Good luck!
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[16]
-      value: You know what...
+      value: '[;0'
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[17]
-      value: I'm doing my best for you...
+      value: END
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[18]
-      value: And you...
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[20]
-      value: "\u0425\u0430!"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[19]
-      value: '[;2'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[20]
-      value: Ha!
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[21]
-      value: "\u041A\u0430\u043A \u043B\u0435\u0433\u043A\u043E \u0436\u0435 \u0442\u0435\u0431\u044F
-        \u043E\u0431\u043C\u0430\u043D\u0443\u0442\u044C"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[21]
-      value: How easy it is to deceive you
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AddCoin
+      value: DropCat
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
@@ -3067,7 +3046,7 @@ PrefabInstance:
         type: 3}
       propertyPath: events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1292042616}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[38]
@@ -3131,52 +3110,42 @@ PrefabInstance:
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[29]
-      value: '[;3'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[28]
-      value: "\u0423\u0434\u0430\u0447\u0438!"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[27]
-      value: "\u0421\u043E\u0431\u0438\u0440\u0430\u0439 \u043C\u043E\u043D\u0435\u0442\u044B
-        \u0438 \u043F\u0435\u0440\u0435\u0441\u0442\u0430\u043D\u044C \u0438\u0437\u0434\u0435\u0432\u0430\u0442\u044C\u0441\u044F
-        \u043D\u0430\u0434\u043E \u043C\u043D\u043E\u0439"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[26]
-      value: "\u041B\u0430\u0434\u043D\u043E"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[25]
-      value: "\u0415\u0441\u043B\u0438 \u0434\u0430, \u0442\u043E \u044F \u043F\u043E\u0441\u0442\u0430\u0432\u043B\u044E
-        0 \u043C\u0435\u0441\u0442\u043E 2"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[24]
-      value: "\u0412\u0441\u0451 \u0435\u0449\u0451 \u0445\u043E\u0447\u0435\u0442\u0441\u044F
-        \u043C\u043D\u0435 \u0433\u0440\u0443\u0431\u0438\u0442\u044C?"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[23]
-      value: "\u0427\u0442\u043E \u0431\u044B \u0434\u0430\u0442\u044C \u0442\u0435\u0431\u0435
-        \u0434\u0432\u043E\u0439\u043D\u043E\u0439 \u043F\u0440\u044B\u0436\u043E\u043A
-        \u044F \u043F\u0440\u043E\u0441\u0442\u043E \u043F\u043E\u043C\u0435\u043D\u044F\u043B
-        \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \"MaxJumpCount\" \u0441 1
-        \u043D\u0430 2"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: RU.Array.data[22]
-      value: "\u0421\u0435\u0439\u0447\u0430\u0441 \u044F \u0440\u0430\u0441\u0441\u043A\u0430\u0436\u0443
-        \u0442\u0435\u0431\u0435 \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0439
-        \u0441\u0435\u043A\u0440\u0435\u0442:"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
@@ -3241,43 +3210,42 @@ PrefabInstance:
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[22]
-      value: 'Now I''ll tell you a little secret:'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[23]
-      value: To give you a double jump, I just changed the value of "MaxJumpCount"
-        from 1 to 2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[24]
-      value: Do I still want to be rude?
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[25]
-      value: If Yes, I will put 0 in place of 2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[26]
-      value: Okay
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[27]
-      value: Collect coins and stop making fun of me
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[28]
-      value: Good luck!
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
       propertyPath: EN.Array.data[29]
-      value: '[;3'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0,
         type: 3}
@@ -11331,7 +11299,7 @@ PrefabInstance:
     - target: {fileID: 1370791496558655479, guid: 78bfa84b8bd4f1d45adf3327f428173e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -183.437
+      value: -155.785
       objectReference: {fileID: 0}
     - target: {fileID: 1370791496558655479, guid: 78bfa84b8bd4f1d45adf3327f428173e,
         type: 3}
@@ -11385,6 +11353,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78bfa84b8bd4f1d45adf3327f428173e, type: 3}
+--- !u!1 &1292042615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2528573471615164454, guid: 65e70e6c60c73c74fa14052eb156dab0,
+    type: 3}
+  m_PrefabInstance: {fileID: 555989051}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1292042616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292042615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234736bbe0ee92a43af2a3e4caa96b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLiftActivated: 0
+  cables: []
+  lift: {fileID: 0}
+  liftLocker: {fileID: 0}
+  secondLift: {fileID: 0}
+  secondLiftLocker: {fileID: 0}
+  cat: {fileID: 1292042615}
+  angryCat: {fileID: 0}
+  normalCat: {fileID: 0}
+  happyCat: {fileID: 0}
+  tpObj: {fileID: 0}
+  tpTime: 3
+  end: {fileID: 0}
 --- !u!1001 &1296369399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11994,6 +11993,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59ab86f5524f8c34a86e8367bfb0b8e0, type: 3}
+--- !u!1001 &1452429648
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6438327931447576360, guid: f5ac1ae5a9aa0f9428bafc824ea19c26,
+        type: 3}
+      propertyPath: NEXT_LEVEL
+      value: Scenes/MainHub
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438327931447576361, guid: f5ac1ae5a9aa0f9428bafc824ea19c26,
+        type: 3}
+      propertyPath: m_Name
+      value: End
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438327931447576364, guid: f5ac1ae5a9aa0f9428bafc824ea19c26,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -158.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438327931447576364, guid: f5ac1ae5a9aa0f9428bafc824ea19c26,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 26.453
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438327931447576364, guid: f5ac1ae5a9aa0f9428bafc824ea19c26,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438327931447576364, guid: f5ac1ae5a9aa0f9428bafc824ea19c26,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438327931447576364, guid: f5ac1ae5a9aa0f9428bafc824ea19c26,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438327931447576364, guid: f5ac1ae5a9aa0f9428bafc824ea19c26,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438327931447576364, guid: f5ac1ae5a9aa0f9428bafc824ea19c26,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5ac1ae5a9aa0f9428bafc824ea19c26, type: 3}
 --- !u!1001 &1465871902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16590,8 +16643,89 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: -67, y: 9, z: 0}
     second:
-      m_TileIndex: 13
-      m_TileSpriteIndex: 12
+      m_TileIndex: 12
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -66, y: 9, z: 0}
+    second:
+      m_TileIndex: 12
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -65, y: 9, z: 0}
+    second:
+      m_TileIndex: 12
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -64, y: 9, z: 0}
+    second:
+      m_TileIndex: 12
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -63, y: 9, z: 0}
+    second:
+      m_TileIndex: 12
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -62, y: 9, z: 0}
+    second:
+      m_TileIndex: 12
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -61, y: 9, z: 0}
+    second:
+      m_TileIndex: 12
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -60, y: 9, z: 0}
+    second:
+      m_TileIndex: 12
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -59, y: 9, z: 0}
+    second:
+      m_TileIndex: 12
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -58, y: 9, z: 0}
+    second:
+      m_TileIndex: 16
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 1
       m_ObjectToInstantiate: {fileID: 0}
@@ -23652,15 +23786,15 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 686daf4468566334c9edbe19822a7dde, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 09466babe93a54444a23a42a35f3ce78, type: 2}
-  - m_RefCount: 383
+  - m_RefCount: 392
     m_Data: {fileID: 11400000, guid: 6cd6f9b36c22ab348932385921de2c4c, type: 2}
-  - m_RefCount: 34
+  - m_RefCount: 33
     m_Data: {fileID: 11400000, guid: 9017b7d9ef4bf6b44bd2c793ea22a966, type: 2}
   - m_RefCount: 35
     m_Data: {fileID: 11400000, guid: 9b5e52bf09ec4f24da2a3fa0c5c0216c, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: a5074aa8cb11e384cbea2f2722788317, type: 2}
-  - m_RefCount: 9
+  - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: d886382d4b2871a45a8b39f23dc602ca, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: d21f4750d84616a49abc9ae38cea207a, type: 2}
@@ -23689,15 +23823,15 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 2bcd453f2c5e4dd4e8f14b58b5d27a54, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: f2541331142b44c40bfe53fed8d7bb57, type: 3}
-  - m_RefCount: 383
+  - m_RefCount: 392
     m_Data: {fileID: 21300000, guid: 5d9653c7357eac144b9beb6b099e46eb, type: 3}
-  - m_RefCount: 34
+  - m_RefCount: 33
     m_Data: {fileID: 21300000, guid: 0b5856c383655c646af49c63036c4a7e, type: 3}
   - m_RefCount: 35
     m_Data: {fileID: 21300000, guid: 93435e023f81ac2408a06c5c99cb22e0, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 02efe25d5b693ee41844a4512097d518, type: 3}
-  - m_RefCount: 9
+  - m_RefCount: 10
     m_Data: {fileID: 21300000, guid: 0ef04525f30bc0d44a003db258e29e8f, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 4bbe5acfe4b59604087e898ac25234b1, type: 3}
@@ -23706,7 +23840,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 2c87cf3d6b190e7458f38be456349b4b, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 1185
+  - m_RefCount: 1194
     m_Data:
       e00: 1
       e01: 0
@@ -23727,7 +23861,7 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 25
     m_Data: {r: 0.7372549, g: 0.7372549, b: 0.7372549, a: 1}
-  - m_RefCount: 1156
+  - m_RefCount: 1165
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 4
     m_Data: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}

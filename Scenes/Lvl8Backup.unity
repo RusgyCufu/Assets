@@ -14942,7 +14942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded7885a37d650845a7a765c8c310415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NEXT_LEVEL: Scenes/LvlSelect
+  NEXT_LEVEL: Scenes/MainHub
 --- !u!61 &1053906149
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14950,13 +14950,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053906147}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.15195465}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -14967,7 +14967,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5, y: 2.5}
+  m_Size: {x: 1.0944214, y: 2.1960907}
   m_EdgeRadius: 0
 --- !u!95 &1053906150
 Animator:
@@ -15481,14 +15481,14 @@ RectTransform:
   m_GameObject: {fileID: 1136741757}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.019539999, y: 0.019539999, z: 0.019539999}
+  m_LocalScale: {x: 0.15790273, y: 0.15790273, z: 0.15790273}
   m_Children: []
   m_Father: {fileID: 403870706}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 134, y: 122}
   m_SizeDelta: {x: 258.6346, y: 144.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1136741759
@@ -15552,8 +15552,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 157.3
-  m_fontSizeBase: 157.3
+  m_fontSize: 2529.98
+  m_fontSizeBase: 2529.98
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -15569,7 +15569,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -15598,7 +15598,7 @@ MonoBehaviour:
     spaceCount: 2
     wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 7
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

@@ -50,6 +50,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -120,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveScale: 0.1
   offset: {x: 0, y: 0, z: 0}
+  posOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &2528573471615164454
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +193,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -211,9 +216,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1054227135
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: 1497740695
+  m_SortingLayer: 1
+  m_SortingOrder: -18
   m_Sprite: {fileID: 21300000, guid: 44e3891abe2626f4cba091eb77dd3fba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -289,22 +294,39 @@ MonoBehaviour:
   - nice try
   - now i len you go fuck yourself
   - GO AWAY STUPID RETARD!!!!!!!!
-  - '...'
+  - ...
   - END
   - WHAT?????????
   - Fuck YOU
   - RETARD
   - go fuck yourself, motherfucker
   - '[;0'
-  - '...'
+  - ...
   - END
   charSound: DefaultCharSound
-  EN: []
+  EN:
+  - '{;2;1;Buy ITEM for 228 coins;Cancel'
+  - END
+  - '[;0'
+  - ------
+  - Congratulations on your successful purchase!
+  - END
+  - ----------
+  - Not enough coins :(
+  - END
+  - ---------
+  - Sorry, but you can buy this item only once. And guess what? You already bought
+    it :)
+  - END
+  - END
+  - END
+  - END
   RU: []
   events:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
         m_MethodName: ActiveLift
         m_Mode: 1
         m_Arguments:
