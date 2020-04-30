@@ -100,6 +100,7 @@ public class GameOverlay : MonoBehaviour
     {
         Time.timeScale = 1;
         GetChildWithName(this.gameObject, "RestartOverlay").GetComponent<Canvas>().enabled = false;
+        main.GetComponent<main_script>().hp = 1f;
         main.GetComponent<main_script>().respawn(main.GetComponent<main_script>().resp);
     }
 

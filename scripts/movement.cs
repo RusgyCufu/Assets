@@ -13,15 +13,13 @@ public class movement : MonoBehaviour
 	public float runSpeed = 40f;
 
 	float horizontalMove = 40f;
-	bool jump = false;
-	bool act = false;
+	[HideInInspector] bool jump = false;
+	[HideInInspector] bool act = false;
 
-	public bool jumpInput = true;
-	public bool actInput = false;
+	[HideInInspector] public bool jumpInput = true;
+	[HideInInspector] public bool actInput = false;
 
-	float horizontalInput;
-
-	[SerializeField] GameObject actMenu;
+	[HideInInspector] float horizontalInput;
 
 	void Start()
 	{
@@ -95,8 +93,7 @@ public class movement : MonoBehaviour
 			}
 			else
 			{
-				Debug.Log("Open");
-				actMenu.active = !actMenu.active;
+				GetComponent<CharacterController2D>().Dash();
 			}
 			
 		}
@@ -107,13 +104,14 @@ public class movement : MonoBehaviour
 	{
 		// Move our character
 		//controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+		float move = horizontalMove;
 		if (isParalyzed)
 		{
 			((CharacterController2D)controller).Move(0f * Time.fixedDeltaTime, false, false);
 		}
 		else
 		{
-			((CharacterController2D)controller).Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+			((CharacterController2D)controller).Move(move * Time.fixedDeltaTime, false, jump);
 		}
 		jump = false;
 		act = false;

@@ -4,19 +4,31 @@ using UnityEngine;
 
 public class Rain : MonoBehaviour
 {
-    GameObject cam;
+    public ParticleSystem part;
+    [SerializeField] public List<ParticleCollisionEvent> collisionEvents;
+
     void Start()
     {
-        cam = GameObject.FindGameObjectWithTag("MainCamera");
+        part = GetComponent<ParticleSystem>();
+        collisionEvents = new List<ParticleCollisionEvent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnParticleCollision(GameObject other)
     {
-        //float t = transform.position.z;
-        //Vector3 tmp = cam.transform.position;
-        //tmp.z = t;
-        //transform.position = tmp;
-        //GetComponent<ParticleSystem>().po
+        int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
+
+        Rigidbody rb = other.GetComponent<Rigidbody>();
+        int i = 0;
+
+        while (i < numCollisionEvents)
+        {
+            if (rb)
+            {
+                Vector3 pos = collisionEvents[i].intersection;
+                Vector3 force = collisionEvents[i].velocity * 10;
+                rb.AddForce(force);
+            }
+            i++;
+        }
     }
 }

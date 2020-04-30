@@ -7,21 +7,29 @@ using UnityEngine.SceneManagement;
 public class main_script : MonoBehaviour
 {
     [SerializeField] public bool debug = true;
-    
-    [Header ("skins")]
-        [SerializeField] public Sprite[] skins;
-        [SerializeField] public int skinID;
-        [SerializeField] public string[] skinNamesEN;
-        [SerializeField] public string[] skinNamesRU;
-    
+
+    [Header("skins")]
+    [SerializeField] public Sprite[] skins;
+    [SerializeField] public int skinID;
+    [SerializeField] public string[] skinNamesEN;
+    [SerializeField] public string[] skinNamesRU;
+
 
     [Header("Other")]
-        [SerializeField] public Transform player;
-        [HideInInspector] public GameObject resp;
-        [SerializeField] public GameObject[] checkpoints;
-        [SerializeField] public int coins;
-        [SerializeField] UnityEvent deathEvent;
+    [SerializeField] public Transform player;
+    [HideInInspector] public GameObject resp;
+    [SerializeField] public GameObject[] checkpoints;
+    [SerializeField] public int coins;
+    [SerializeField] UnityEvent deathEvent;
 
+    [Header("Rain")]
+        public float hp = 1f;
+        public bool doRainDamage = false;
+        public float rainDamage = 0.1f;
+        public bool healByTime = true;
+        public float healValue = 0.1f;
+
+    private GameObject restartScreen;
 
     void RewriteCoins()
     {
@@ -60,6 +68,7 @@ public class main_script : MonoBehaviour
     }
     void Start()
     {
+        restartScreen = (GameObject)GameObject.FindGameObjectsWithTag("Restart").GetValue(0);
         ChangeSkin(PlayerPrefs.GetInt("active_skin"));
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "unlock", 1);
         if (PlayerPrefs.HasKey("Coins") == false)
@@ -75,6 +84,35 @@ public class main_script : MonoBehaviour
         {
             respawn(checkpoints[PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "CheckpointIndex")]);
         }
-        
+
+    }
+    private void Update()
+    {
+        if (healByTime)
+        {
+            hp += healValue * Time.deltaTime;
+            if (hp > 1f)
+            {
+                hp = 1f;
+            }
+        }
+    }
+    void OnParticleCollision(GameObject other)
+    {
+        if (doRainDamage)
+        {
+            hp -= rainDamage;
+            if(hp < 0f)
+            {
+                Death();
+                hp = 0f;
+            }
+        }
+    }
+    public void Death()
+    {
+        restartScreen.GetComponent<Canvas>().enabled = true;
+        AudioManager.AudioManager.m_instance.PlaySFX(2);
+        Time.timeScale = 0;
     }
 }

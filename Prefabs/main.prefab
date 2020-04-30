@@ -321,6 +321,11 @@ MonoBehaviour:
   deathEvent:
     m_PersistentCalls:
       m_Calls: []
+  hp: 1
+  doRainDamage: 0
+  rainDamage: 0.1
+  healByTime: 1
+  healValue: 0.1
 --- !u!114 &1695927482924189710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,6 +351,10 @@ MonoBehaviour:
   m_CeilingCheck: {fileID: 1695927481961496310}
   m_CrouchDisableCollider: {fileID: 0}
   jumpsLeft: 0
+  maxDashes: 0
+  dashesLeft: 0
+  dashSpeed: 10
+  dashTime: 0.1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -369,4 +378,3 @@ MonoBehaviour:
   runSpeed: 158.28
   jumpInput: 0
   actInput: 0
-  actMenu: {fileID: 0}

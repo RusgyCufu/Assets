@@ -4,14 +4,14 @@ using UnityEngine.Events;
 public class CharacterController2D : MonoBehaviour
 {
 	[SerializeField] bool invertFlip;
-	[SerializeField] private float m_JumpForce = 800f;                          // Amount of force added when the player jumps.
-	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;          // Amount of maxSpeed applied to crouching movement. 1 = 100%
-	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .1f;  // How much to smooth out the movement
-	[SerializeField] private bool m_AirControl = false;                         // Whether or not a player can steer while jumping;
-	[SerializeField] public int maxJumpCount = 2;                              // Jump count								
-	[SerializeField] private LayerMask m_WhatIsGround;                          // A mask determining what is ground to the character
-	[SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
-	[SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
+	[SerializeField] private float m_JumpForce = 800f;                                  // Amount of force added when the player jumps.
+	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;                 // Amount of maxSpeed applied to crouching movement. 1 = 100%
+	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .1f;         // How much to smooth out the movement
+	[SerializeField] private bool m_AirControl = false;                              // Whether or not a player can steer while jumping;
+	[SerializeField] public int maxJumpCount = 2;                                   // Jump count								
+	[SerializeField] private LayerMask m_WhatIsGround;                             // A mask determining what is ground to the character
+	[SerializeField] private Transform m_GroundCheck;                             // A position marking where to check if the player is grounded.
+	[SerializeField] private Transform m_CeilingCheck;                           // A position marking where to check for ceilings
 	[SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
 
 	const float k_GroundedRadius = .1f; // Radius of the overlap circle to determine if grounded
@@ -22,6 +22,13 @@ public class CharacterController2D : MonoBehaviour
 	private Vector3 m_Velocity = Vector3.zero;
 	[HideInInspector] public int jumpsLeft = 0;
 	bool wasGrounded = false;
+
+	public int maxDashes = 0;
+	[HideInInspector] public int dashesLeft = 0;
+	public float dashSpeed;
+	public float dashTime;
+	bool isDashing = false;
+	private float dashTimeLeft;
 
 	[Header("Events")]
 	[Space]
@@ -46,6 +53,7 @@ public class CharacterController2D : MonoBehaviour
 		m_Rigidbody2D.AddRelativeForce(new Vector2(0f, force == 0f?m_JumpForce: force));
 
 		AudioManager.AudioManager.m_instance.PlaySFX("Jump");
+		//GetChildWithName(GameObject.FindGameObjectWithTag("Phantom"), "jmp").GetComponent<ParticleSystem>().Play();
 	}
 	private void Awake()
 	{
@@ -93,9 +101,17 @@ public class CharacterController2D : MonoBehaviour
 
 	public void Move(float move, bool crouch, bool jump)
 	{
+		dashTimeLeft -= Time.fixedDeltaTime;
+		if(dashTimeLeft < 0)
+		{
+			isDashing = false;
+			GetChildWithName(GameObject.FindGameObjectWithTag("Phantom"), "part").GetComponent<ParticleSystem>().Stop();
+		}
+
 		if (m_Grounded && wasGrounded)
 		{
 			jumpsLeft = maxJumpCount;
+			dashesLeft = maxDashes;
 		}
 
 		if (!crouch)
@@ -135,8 +151,11 @@ public class CharacterController2D : MonoBehaviour
 					OnCrouchEvent.Invoke(false);
 				}
 			}
-
-			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
+			if (isDashing)
+			{
+				move *= dashSpeed;
+			}
+			Vector3 targetVelocity = new Vector2(move * 10f, isDashing?0f:m_Rigidbody2D.velocity.y);
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
 			if (move > 0 && !m_FacingRight)
@@ -157,6 +176,16 @@ public class CharacterController2D : MonoBehaviour
 			m_Grounded = false;
 		}
 	}
+	public void Dash()
+	{
+		if (dashesLeft > 0 && !m_Grounded)
+		{
+			GetChildWithName(GameObject.FindGameObjectWithTag("Phantom"), "part").GetComponent<ParticleSystem>().Play();
+			dashesLeft -= 1;
+			isDashing = true;
+			dashTimeLeft = dashTime;
+		}
+	}
 	private void Flip()
 	{
 		m_FacingRight = !m_FacingRight;
@@ -171,6 +200,19 @@ public class CharacterController2D : MonoBehaviour
 		if (invertFlip)
 		{
 			phantom.GetComponent<Phantom>().flip = !phantom.GetComponent<Phantom>().flip;
+		}
+	}
+	GameObject GetChildWithName(GameObject obj, string name)
+	{
+		Transform trans = obj.transform;
+		Transform childTrans = trans.Find(name);
+		if (childTrans != null)
+		{
+			return childTrans.gameObject;
+		}
+		else
+		{
+			return null;
 		}
 	}
 }
