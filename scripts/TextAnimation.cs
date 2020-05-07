@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections.Generic;
-using System.Collections;
 using AudioManager;
 
 public class TextAnimation : MonoBehaviour
@@ -17,8 +15,9 @@ public class TextAnimation : MonoBehaviour
 
     private int lastSound = 0;
 
-    public void StartAnimation(string newText = null, string sound = "DefaultCharSound")
+    public void StartAnimation(string newText = null, float newCharTime = 0.05f, string sound = "DefaultCharSound")
     {
+        charTime = newCharTime;
         charSound = sound;
         animTime = 0f;
         lastSound = 0;
@@ -38,7 +37,7 @@ public class TextAnimation : MonoBehaviour
     {
         this.gameObject.GetComponent<TMPro.TextMeshProUGUI>().SetText(text);
     }
-    // Update is called once per frame
+
     void Update()
     {
         if (anim)
@@ -56,8 +55,6 @@ public class TextAnimation : MonoBehaviour
                 string showText = text.Substring(0, charsToShow);
                 if (charsToShow - lastSound >= charsToSound)
                 {
-                    Debug.Log(charsToShow - lastSound);
-                    Debug.Log(charsToSound);
                     AudioManager.AudioManager.m_instance.PlaySFX(charSound);
                     lastSound = charsToShow;
                 }

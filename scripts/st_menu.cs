@@ -17,8 +17,6 @@ public class st_menu : MonoBehaviour
 
     public void ToGame()
     {
-        PlayerPrefs.SetString("ContinueLvl", DEFAULT_LVL);
-        //SceneManager.LoadScene("lvl1");
         if (PlayerPrefs.HasKey("ContinueLvl"))
         {
             SceneManager.LoadScene(PlayerPrefs.GetString("ContinueLvl"));

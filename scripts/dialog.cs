@@ -37,7 +37,7 @@ public class dialog : MonoBehaviour
 
         TMPro.TextMeshProUGUI displaytext = GetChildWithName(simpleUi.gameObject, "text").GetComponent<TMPro.TextMeshProUGUI>();
         displaytext.SetText(content);
-        displaytext.gameObject.GetComponent<TextAnimation>().StartAnimation(content, npc.charSound);
+        displaytext.gameObject.GetComponent<TextAnimation>().StartAnimation(content, npc.charTime, npc.charSound);
     }
     private void DisplaySequence(string content1, string content2)
     {
@@ -50,10 +50,11 @@ public class dialog : MonoBehaviour
         GetChildWithName(s1.gameObject, "text").GetComponent<TMPro.TextMeshProUGUI>().SetText(content1);
         GetChildWithName(s2.gameObject, "text").GetComponent<TMPro.TextMeshProUGUI>().SetText(content2);
 
-        GetChildWithName(s1.gameObject, "text").GetComponent<TextAnimation>().StartAnimation(content1);
-        GetChildWithName(s2.gameObject, "text").GetComponent<TextAnimation>().StartAnimation(content2);
+        GetChildWithName(s1.gameObject, "text").GetComponent<TextAnimation>().StartAnimation(content1, npc.charTime);
+        GetChildWithName(s2.gameObject, "text").GetComponent<TextAnimation>().StartAnimation(content2, npc.charTime);
     }
     public void Display() {
+        //Debug.Log(dialogPointer);
         string content = npc.dialogs.GetValue(dialogPointer).ToString();
         string[] data = npc.dialogs.GetValue(dialogPointer).ToString().Split(';');
         if (data[0] == "{")
@@ -107,14 +108,5 @@ public class dialog : MonoBehaviour
         npc = newNPC;
         dialogPointer = npc.startDialogPointer;
         Display();
-    }
-
-    public void test()
-    {
-        bool t = this.GetComponent<Canvas>().enabled;
-
-        t = !t;
-
-        this.GetComponent<Canvas>().enabled = t;
     }
 }

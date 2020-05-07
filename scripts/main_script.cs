@@ -68,6 +68,7 @@ public class main_script : MonoBehaviour
     }
     void Start()
     {
+        PlayerPrefs.SetString("ContinueLvl", SceneManager.GetActiveScene().name);
         restartScreen = (GameObject)GameObject.FindGameObjectsWithTag("Restart").GetValue(0);
         ChangeSkin(PlayerPrefs.GetInt("active_skin"));
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "unlock", 1);

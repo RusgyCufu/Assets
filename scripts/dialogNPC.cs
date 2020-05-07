@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class dialogNPC : MonoBehaviour
 {
     [HideInInspector]public string[] dialogs;
+    [SerializeField] public float charTime = 0.05f;
     [SerializeField] public string charSound = "DefaultCharSound";
     [SerializeField] public string[] EN;
     [SerializeField] public string[] RU;

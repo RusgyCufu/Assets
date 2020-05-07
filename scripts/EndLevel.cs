@@ -18,8 +18,7 @@ public class EndLevel : MonoBehaviour
     {
         if (collision == main.GetComponent<CapsuleCollider2D>())
         {
-            PlayerPrefs.SetString("ContinueLvl", NEXT_LEVEL);
-            PlayerPrefs.SetInt("CheckpointIndex", 0);
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "CheckpointIndex", 0);
             SceneManager.LoadScene(NEXT_LEVEL);
         }
     }

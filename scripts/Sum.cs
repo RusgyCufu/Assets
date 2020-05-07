@@ -10,6 +10,8 @@ public class Sum : MonoBehaviour
     [SerializeField] GameObject resultDisplay;
     [SerializeField] GameObject onOffObj;
     [SerializeField] int goal = 228;
+    [SerializeField] bool invert = false;
+
     private int value;
     void Update()
     {
@@ -28,6 +30,6 @@ public class Sum : MonoBehaviour
             new Vector4(0.1682093f, 0.3732349f, 0.5660378f, 1):
             new Vector4(0.5372549f, 0.5372549f, 0.5372549f, 1)
             );
-        onOffObj.SetActive(equal);
+        onOffObj.SetActive(invert?!equal:equal);
     }
 }
