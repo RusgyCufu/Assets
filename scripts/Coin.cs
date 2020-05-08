@@ -11,7 +11,7 @@ public class Coin : MonoBehaviour
     private bool collected = false;
     void Start()
     {
-        main = (GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0);
+        main = GameObject.FindGameObjectWithTag("main");
         if(PlayerPrefs.GetInt("coin_" +
             SceneManager.GetActiveScene().name +
             "_" + transform.position.x.ToString() +

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;// Required when using Event data.
+using UnityEngine.EventSystems;
 
 public class movement : MonoBehaviour
 {
