@@ -12,6 +12,8 @@ public class MainHub : MonoBehaviour
         {
             main.GetComponent<CharacterController2D>().maxJumpCount = 2;
         }
+
+        main.GetComponent<CharacterController2D>().maxDashes = PlayerPrefs.GetInt("max_dashes");
     }
 
     void GiveSkin(int n)

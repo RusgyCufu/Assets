@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    [SerializeField] public bool move = true;
-    [SerializeField] public float movingTime;
-    [SerializeField] public bool doOnce = false;
-    [SerializeField] public GameObject[] targets;
-    private float currentMovingTime;
+    public bool move = true;
+    public float movingTime;
+    public bool doOnce = false;
+    public GameObject[] targets;
+    public float currentMovingTime;
     private Vector3 basePos;
     private GameObject main;
 

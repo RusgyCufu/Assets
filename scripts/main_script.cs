@@ -29,6 +29,7 @@ public class main_script : MonoBehaviour
         public bool healByTime = true;
         public float healValue = 0.1f;
 
+
     private GameObject restartScreen;
 
     void RewriteCoins()
@@ -47,6 +48,8 @@ public class main_script : MonoBehaviour
     }
     public void respawn(GameObject respawnPoint)
     {
+        this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        transform.parent = null;
         this.transform.position = respawnPoint.transform.position;
         GameObject.FindGameObjectWithTag("Phantom").GetComponent<Phantom>().ResetPos();
 
@@ -68,10 +71,20 @@ public class main_script : MonoBehaviour
     }
     void Start()
     {
+        if(PlayerPrefs.HasKey("max_dashes") == false)
+        {
+            PlayerPrefs.SetInt("max_dashes", 0);
+        }
+        if(GetComponent<CharacterController2D>().maxDashes > PlayerPrefs.GetInt("max_dashes"))
+        {
+            PlayerPrefs.SetInt("max_dashes", GetComponent<CharacterController2D>().maxDashes);
+        }
+
         PlayerPrefs.SetString("ContinueLvl", SceneManager.GetActiveScene().name);
         restartScreen = (GameObject)GameObject.FindGameObjectsWithTag("Restart").GetValue(0);
         ChangeSkin(PlayerPrefs.GetInt("active_skin"));
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "unlock", 1);
+
         if (PlayerPrefs.HasKey("Coins") == false)
         {
             PlayerPrefs.SetInt("Coins", 0);
@@ -96,6 +109,11 @@ public class main_script : MonoBehaviour
             {
                 hp = 1f;
             }
+        }
+
+        if(transform.position.y < -9999)
+        {
+            Death();
         }
     }
     void OnParticleCollision(GameObject other)

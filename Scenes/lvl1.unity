@@ -1173,6 +1173,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2411,7 +2412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164454, guid: 65e70e6c60c73c74fa14052eb156dab0, type: 3}
       propertyPath: m_Name
-      value: NPC (1)
+      value: Cat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65e70e6c60c73c74fa14052eb156dab0, type: 3}
@@ -3126,6 +3127,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10890,6 +10892,7 @@ MonoBehaviour:
   - {fileID: 2143096158}
   - {fileID: 1237181673}
   - {fileID: 88583562}
+  currentMovingTime: 0
   vel: 0
 --- !u!212 &879991596
 SpriteRenderer:
@@ -12082,6 +12085,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -12677,6 +12681,7 @@ MonoBehaviour:
   - {fileID: 1287385762}
   - {fileID: 2143096158}
   - {fileID: 1237181673}
+  currentMovingTime: 0
   vel: 0
 --- !u!212 &1085722461
 SpriteRenderer:
@@ -13100,6 +13105,7 @@ MonoBehaviour:
   - {fileID: 1766632739}
   - {fileID: 1247162609}
   - {fileID: 1935492550}
+  currentMovingTime: 0
   vel: 0
 --- !u!212 &1117552149
 SpriteRenderer:
@@ -18998,6 +19004,7 @@ MonoBehaviour:
   doOnce: 1
   targets:
   - {fileID: 653281958}
+  currentMovingTime: 0
   vel: 0
 --- !u!1001 &1440063101
 PrefabInstance:
@@ -28587,6 +28594,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -28871,6 +28879,7 @@ MonoBehaviour:
   - {fileID: 1237181673}
   - {fileID: 88583562}
   - {fileID: 1287385762}
+  currentMovingTime: 0
   vel: 0
 --- !u!212 &2032542685
 SpriteRenderer:

@@ -19,6 +19,15 @@ public class LvlScripts : MonoBehaviour
     private bool zhabaYES = false;
     private float dropTimer = 0f;
 
+    public GameObject[] cubes;
+    public float newCubeTime = 12f;
+    public GameObject smolCube;
+    public Vector3 smolCubePos;
+
+    public bool doLsdCat = false;
+    public GameObject lsdCat;
+
+
     void Start()
     {
         main = GameObject.FindGameObjectWithTag("main");
@@ -71,5 +80,22 @@ public class LvlScripts : MonoBehaviour
                 if (dropTimer > dropDelay * 10) DestroyZhabki();
             }
         }
+        if (doLsdCat)
+        {
+            lsdCat.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0f,1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+        }
+    }
+
+    public void ResetCubes()
+    {
+        foreach(var i in cubes)
+        {
+            i.GetComponent<MovingPlatform>().currentMovingTime = newCubeTime;
+        }
+    }
+
+    public void ResetSmolCube()
+    {
+        smolCube.transform.position = smolCubePos;
     }
 }
