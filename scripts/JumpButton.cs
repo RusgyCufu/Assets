@@ -19,7 +19,10 @@ namespace UnityStandardAssets.CrossPlatformInput
 
 		public void OnPointerDown(PointerEventData data)
 		{
-			((movement)main.GetComponent<movement>()).JumpInput();
+			if (main.GetComponent<main_script>().BlockInput == false)
+			{
+				main.GetComponent<movement>().JumpInput();
+			}
 		}
 
 		public void OnPointerUp(PointerEventData data)

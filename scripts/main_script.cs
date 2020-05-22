@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class main_script : MonoBehaviour
 {
     [SerializeField] public bool debug = true;
+    [SerializeField] public bool BlockInput = false;
 
     [Header("skins")]
     [SerializeField] public Sprite[] skins;
@@ -102,6 +103,11 @@ public class main_script : MonoBehaviour
     }
     private void Update()
     {
+        if (hp < 0f)
+        {
+            hp = 0f;
+            Death();
+        }
         if (healByTime)
         {
             hp += healValue * Time.deltaTime;
@@ -123,8 +129,8 @@ public class main_script : MonoBehaviour
             hp -= rainDamage;
             if(hp < 0f)
             {
-                Death();
                 hp = 0f;
+                Death();
             }
         }
     }

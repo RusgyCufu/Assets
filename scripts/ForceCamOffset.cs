@@ -22,8 +22,8 @@ public class ForceCamOffset : MonoBehaviour
 
     void Start()
     {
-        main = (GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0);
-        cam = ((GameObject)GameObject.FindGameObjectsWithTag("MainCamera").GetValue(0)).GetComponent<CameraFollow>();
+        main = GameObject.FindGameObjectWithTag("main");
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>();
         if (target)
         {
             pos = target.position;

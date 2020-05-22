@@ -22,6 +22,7 @@ public class Coin : MonoBehaviour
         }
     }
 
+    public UnityEvent onCollect;
     void Collect()
     {
         PlayerPrefs.SetInt("coin_" +
@@ -35,6 +36,7 @@ public class Coin : MonoBehaviour
         this.GetComponent<Rigidbody2D>().simulated = true;
         this.GetComponent<Rigidbody2D>().gravityScale = 8f;
         this.GetComponent<Rigidbody2D>().AddRelativeForce(collectForce);
+        onCollect.Invoke();
     }
     void VihodVOkno()
     {

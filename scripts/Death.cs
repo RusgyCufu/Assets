@@ -11,6 +11,8 @@ public class Death : MonoBehaviour
 
     private Color oldColor;
 
+    public float dmg = 0.1f;
+
     GameObject GetChildWithName(GameObject obj, string name)
     {
         Transform trans = obj.transform;
@@ -28,7 +30,7 @@ public class Death : MonoBehaviour
     void Start()
     {
         main = GameObject.FindGameObjectWithTag("main");
-        restartScreen = (GameObject)GameObject.FindGameObjectsWithTag("Restart").GetValue(0);
+        restartScreen = GameObject.FindGameObjectWithTag("Restart");
         if (hide)
         {
             oldColor = gameObject.GetComponent<SpriteRenderer>().color;
@@ -37,6 +39,7 @@ public class Death : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject);
         if (collision == main.GetComponent<CapsuleCollider2D>())
         {
             if (hide)
@@ -46,6 +49,10 @@ public class Death : MonoBehaviour
             restartScreen.GetComponent<Canvas>().enabled = true;
             AudioManager.AudioManager.m_instance.PlaySFX(2);
             Time.timeScale = 0;
+        }
+        else if(collision.gameObject.GetComponent<DamageCat>() != null)
+        {
+            collision.GetComponent<DamageCat>().Damage(dmg);
         }
     }
 }

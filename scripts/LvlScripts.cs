@@ -27,6 +27,7 @@ public class LvlScripts : MonoBehaviour
     public bool doLsdCat = false;
     public GameObject lsdCat;
 
+    public Vector3 tpPos;
 
     void Start()
     {
@@ -52,12 +53,33 @@ public class LvlScripts : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
+    public void ResetCubes()
+    {
+        foreach(var i in cubes)
+        {
+            i.GetComponent<MovingPlatform>().currentMovingTime = newCubeTime;
+        }
+    }
+    public void ResetSmolCube()
+    {
+        smolCube.transform.position = smolCubePos;
+    }
+    public void AddCoins(int n)
+    {
+        for(int i = 0; i < n; ++i)
+        {
+            main.GetComponent<main_script>().AddCoin();
+        }
+    }
+    public void TpMain()
+    {
+        main.transform.position = tpPos;
+    }
     void Update()
     {
         if (zhabki)
         {
-            if(
+            if (
                 Zhabka1.GetComponent<ColorNPC>().activeColor == 1 &&
                 Zhabka2.GetComponent<ColorNPC>().activeColor == 2 &&
                 Zhabka3.GetComponent<ColorNPC>().activeColor == 3 &&
@@ -82,20 +104,7 @@ public class LvlScripts : MonoBehaviour
         }
         if (doLsdCat)
         {
-            lsdCat.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0f,1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+            lsdCat.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
         }
-    }
-
-    public void ResetCubes()
-    {
-        foreach(var i in cubes)
-        {
-            i.GetComponent<MovingPlatform>().currentMovingTime = newCubeTime;
-        }
-    }
-
-    public void ResetSmolCube()
-    {
-        smolCube.transform.position = smolCubePos;
     }
 }

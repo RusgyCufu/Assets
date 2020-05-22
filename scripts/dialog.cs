@@ -61,10 +61,16 @@ public class dialog : MonoBehaviour
         {
             System.Convert.ToInt32(data[1]);
             DisplaySequence(data[3], data[4]);
-        }else if (data[0] == "[")
+        }
+        else if (data[0] == "[")
         {
             npc.events[System.Convert.ToInt32(data[1])].Invoke();
             DisplayNext(0);
+        }
+        else if (data[0] == "%")
+        {
+            dialogPointer = System.Convert.ToInt32(data[1]);
+            Display();
         }
         else
         {

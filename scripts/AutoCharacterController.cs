@@ -16,6 +16,7 @@ public class AutoCharacterController : MonoBehaviour
     private int tmpCommand = 0;
     public string[] tmpActions;
     public float[] tmpDelays;
+    public GameObject restart;
 
     [Header("Debug")]
     public bool doJump;
@@ -24,7 +25,7 @@ public class AutoCharacterController : MonoBehaviour
     public bool doRight;
     public bool doStop;
 
-    void GenerateCommandSecuence()
+    public void GenerateCommandSecuence()
     {
         string[] tmpText = commands.Split('\n');
         tmpText.CopyTo(commandSequence, 0);
@@ -35,7 +36,7 @@ public class AutoCharacterController : MonoBehaviour
         main = GameObject.FindGameObjectWithTag("main");
     }
 
-    void RunSequence()
+    public void RunSequence()
     {
         tmpCommand = 0;
         interpritete = true;
@@ -74,6 +75,7 @@ public class AutoCharacterController : MonoBehaviour
         }
         else if (action == "a")
         {
+            Debug.Log("act");
             Act();
         }
     }
@@ -97,7 +99,7 @@ public class AutoCharacterController : MonoBehaviour
     {
         main.GetComponent<movement>().SetHorizontalInput(0f);
     }
-    void FixedUpdate()
+    void Update()
     {
         if (generateByText) GenerateCommandSecuence();
         //debug
@@ -129,7 +131,7 @@ public class AutoCharacterController : MonoBehaviour
             {
                 RunSequence();
             }
-            interpritationTimer += Time.fixedDeltaTime;
+            interpritationTimer += Time.deltaTime;
             for (int i = tmpCommand; i < commandSequence.Length; ++i)
             {
                 if(tmpDelays[i] < interpritationTimer)
@@ -140,5 +142,7 @@ public class AutoCharacterController : MonoBehaviour
             }
         }
         interpriteteFlag = interpritete;
+
+        restart.gameObject.SetActive(interpritete);
     }
 }

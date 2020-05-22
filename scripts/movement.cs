@@ -23,7 +23,7 @@ public class movement : MonoBehaviour
 
 	void Start()
 	{
-		main = (GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0);
+		main = GameObject.FindGameObjectWithTag("main");
 	}
 
 	public void SetHorizontalInput(float newInput)

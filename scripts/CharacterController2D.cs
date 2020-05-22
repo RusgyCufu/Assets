@@ -4,56 +4,64 @@ using UnityEngine.Events;
 public class CharacterController2D : MonoBehaviour
 {
 	[SerializeField] bool invertFlip;
-	[SerializeField] private float m_JumpForce = 800f;                                  // Amount of force added when the player jumps.
-	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;                 // Amount of maxSpeed applied to crouching movement. 1 = 100%
+	[SerializeField] private float m_JumpForce = 800f;                                 // Amount of force added when the player jumps.
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .1f;         // How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;                              // Whether or not a player can steer while jumping;
 	[SerializeField] public int maxJumpCount = 2;                                   // Jump count								
 	[SerializeField] private LayerMask m_WhatIsGround;                             // A mask determining what is ground to the character
 	[SerializeField] private Transform m_GroundCheck;                             // A position marking where to check if the player is grounded.
-	[SerializeField] private Transform m_CeilingCheck;                           // A position marking where to check for ceilings
-	[SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
+	[SerializeField] bool ignoreJump = false;
+	[SerializeField] bool doInvertGravity = false;
 
-	const float k_GroundedRadius = .1f;  // Radius of the overlap circle to determine if grounded
-	private bool m_Grounded;            // Whether or not the player is grounded.
-	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
-	private Rigidbody2D m_Rigidbody2D;
-	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
-	private Vector3 m_Velocity = Vector3.zero;
+	[HideInInspector] const float k_GroundedRadius = .1f;  // Radius of the overlap circle to determine if grounded
+	[HideInInspector] private bool m_Grounded;            // Whether or not the player is grounded.
+	[HideInInspector] private Rigidbody2D m_Rigidbody2D;
+	[HideInInspector] private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+	[HideInInspector] private Vector3 m_Velocity = Vector3.zero;
 	[HideInInspector] public int jumpsLeft = 0;
-	bool wasGrounded = false;
+	[HideInInspector] bool wasGrounded = false;
 
+	[Header("Dash")]
 	public int maxDashes = 0;
-	[HideInInspector] public int dashesLeft = 0;
 	public float dashSpeed;
 	public float dashTime;
-	bool isDashing = false;
-	private float dashTimeLeft;
+	[HideInInspector] public int dashesLeft = 0;
+	[HideInInspector] bool isDashing = false;
+	[HideInInspector] private float dashTimeLeft;
 
 	[Header("Events")]
 	[Space]
 
 	public UnityEvent OnLandEvent;
+	public UnityEvent OnjumpEvent;
 
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
 
-	public BoolEvent OnCrouchEvent;
-	bool m_wasCrouching = false;
 	GameObject phantom;
 
 	public void Jump(float force = 0f)
 	{
-		//Stop falling
-		Vector3 curVelocity = m_Rigidbody2D.velocity;
-		curVelocity.y = 0;
-		m_Rigidbody2D.velocity = curVelocity;
+		if (ignoreJump == false)
+		{
+			//Stop falling
+			Vector3 curVelocity = m_Rigidbody2D.velocity;
+			curVelocity.y = 0;
+			m_Rigidbody2D.velocity = curVelocity;
 
-		//add jump force
-		m_Rigidbody2D.AddRelativeForce(new Vector2(0f, force == 0f?m_JumpForce: force));
+			//add jump force
+			m_Rigidbody2D.AddRelativeForce(new Vector2(0f, force == 0f ? m_JumpForce : force));
+		}
+		
+		if (doInvertGravity)
+		{
+			m_Rigidbody2D.gravityScale = m_Rigidbody2D.gravityScale * -1;
+		}
 
+
+		//effects
 		AudioManager.AudioManager.m_instance.PlaySFX("Jump");
-		//GetChildWithName(GameObject.FindGameObjectWithTag("Phantom"), "jmp").GetComponent<ParticleSystem>().Play();
+		OnjumpEvent.Invoke();
 	}
 	private void Awake()
 	{
@@ -61,9 +69,6 @@ public class CharacterController2D : MonoBehaviour
 
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
-
-		if (OnCrouchEvent == null)
-			OnCrouchEvent = new BoolEvent();
 
 		this.gameObject.GetComponent<SpriteRenderer>().color = new Vector4(0, 0, 0, 0);
 		phantom = GameObject.FindGameObjectWithTag("Phantom");
@@ -114,43 +119,9 @@ public class CharacterController2D : MonoBehaviour
 			dashesLeft = maxDashes;
 		}
 
-		if (!crouch)
-		{
-			if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-			{
-				crouch = true;
-			}
-		}
-
 		//only control the player if grounded or airControl is turned on
 		if (m_Grounded || m_AirControl)
 		{
-
-			// If crouching
-			if (crouch)
-			{
-				if (!m_wasCrouching)
-				{
-					m_wasCrouching = true;
-					OnCrouchEvent.Invoke(true);
-				}
-
-				// Reduce the speed by the crouchSpeed multiplier
-				move *= m_CrouchSpeed;
-
-				if (m_CrouchDisableCollider != null)
-					m_CrouchDisableCollider.enabled = false;
-			} else
-			{
-				if (m_CrouchDisableCollider != null)
-					m_CrouchDisableCollider.enabled = true;
-
-				if (m_wasCrouching)
-				{
-					m_wasCrouching = false;
-					OnCrouchEvent.Invoke(false);
-				}
-			}
 			if (isDashing)
 			{
 				move *= dashSpeed;
