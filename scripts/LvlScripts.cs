@@ -29,11 +29,19 @@ public class LvlScripts : MonoBehaviour
 
     public Vector3 tpPos;
 
+    [Header("Salt")]
+    public bool doSalt = false;
+    public GameObject[] saltOff;
+    public GameObject[] saltOn;
+    public GameObject cam;
+    public bool salt = false;
+    public bool doGI = false;
+    public float saltSpeed = 100f;
+
     void Start()
     {
         main = GameObject.FindGameObjectWithTag("main");
     }
-
     void DropZhaba(GameObject zhabka)
     {
         zhabka.GetComponent<Rigidbody2D>().simulated = true;
@@ -75,6 +83,14 @@ public class LvlScripts : MonoBehaviour
     {
         main.transform.position = tpPos;
     }
+    public void SetLsd(bool b)
+    {
+        doLsdCat = b;
+    }
+    public void SetSalt(bool b)
+    {
+        salt = b;
+    }
     void Update()
     {
         if (zhabki)
@@ -105,6 +121,43 @@ public class LvlScripts : MonoBehaviour
         if (doLsdCat)
         {
             lsdCat.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+        }
+        if (doSalt)
+        {
+            foreach(var i in saltOff)
+            {
+                i.SetActive(salt == true);
+            }
+            foreach (var i in saltOff)
+            {
+                i.SetActive(salt == false);
+            }
+            if (salt)
+            {
+                if (cam.GetComponent<Animation>().isPlaying == false)
+                {
+                    cam.GetComponent<Animation>().Play();
+                }
+                main.GetComponent<movement>().runSpeed = saltSpeed;
+
+                main.GetComponent<CharacterController2D>().ignoreJump = true;
+                main.GetComponent<CharacterController2D>().doInvertGravity = true;
+            }
+            else
+            {
+                if (cam.GetComponent<Animation>().isPlaying)
+                {
+                    cam.GetComponent<Animation>().Stop();
+                }
+                cam.GetComponent<Camera>().orthographicSize = 7f;
+                main.GetComponent<movement>().runSpeed = 56.9808f;
+                if (main.GetComponent<Rigidbody2D>().gravityScale < 0)
+                {
+                    main.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                }
+                main.GetComponent<CharacterController2D>().ignoreJump = false;
+                main.GetComponent<CharacterController2D>().doInvertGravity = false;
+            }
         }
     }
 }

@@ -894,6 +894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &116135805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1017,6 +1018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &130408488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1137,7 +1139,7 @@ LightingSettings:
   m_MixedBakeMode: 2
   m_LightmapsBakeMode: 1
   m_FilterMode: 1
-  m_LightmapParameters: {fileID: 0}
+  m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
   m_ExportTrainingData: 0
   m_TrainingDataDestination: TrainingData
   m_RealtimeResolution: 2
@@ -1429,6 +1431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &241883211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2205,6 +2208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!212 &391374757
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2611,6 +2615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &453249640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21672,6 +21677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &566832078
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21795,6 +21801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &603159458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22697,6 +22704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &721957091
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23223,6 +23231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &810130613
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23428,6 +23437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &864091292
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23585,6 +23595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &891850250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24027,6 +24038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &942355682
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25097,6 +25109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &979427902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25508,6 +25521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1022912716
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25971,6 +25985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1066698444
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26167,6 +26182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1073533928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26675,6 +26691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1111749110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26855,6 +26872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1128015565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27719,6 +27737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1190963535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27850,6 +27869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1223677931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27973,6 +27993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1233027698
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28813,6 +28834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1264551529
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29198,6 +29220,7 @@ MonoBehaviour:
   doOnce: 1
   targets:
   - {fileID: 923110307}
+  currentMovingTime: 0
   vel: 0
 --- !u!61 &1320746697
 BoxCollider2D:
@@ -29758,6 +29781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1374605236
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30292,6 +30316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1454592139
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30449,6 +30474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1460274051
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30534,7 +30560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460274049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 218.193, y: 9.674, z: 0}
+  m_LocalPosition: {x: 218.193, y: 9.647, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -32108,6 +32134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1580831254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32386,6 +32413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1683318160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32509,6 +32537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1687161267
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47376,6 +47405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1787299837
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48425,6 +48455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1911746821
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48510,7 +48541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911746819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 222.16, y: 9.674, z: 0}
+  m_LocalPosition: {x: 222.16, y: 9.643, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -49467,6 +49498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1957004379
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49590,6 +49622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &1969218444
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50159,6 +50192,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -50290,6 +50324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!61 &2067209620
 BoxCollider2D:
   m_ObjectHideFlags: 0

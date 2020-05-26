@@ -55,7 +55,6 @@ public class lvl1 : MonoBehaviour
     }
     public void DropCat()
     {
-        PlayerPrefs.SetInt("DropCat_" + SceneManager.GetActiveScene().name, 1);
         cat.GetComponent<Rigidbody2D>().simulated = true;
     }
     public void AngryCat()
@@ -76,13 +75,7 @@ public class lvl1 : MonoBehaviour
     }
     private void Start()
     {
-        if(cat != null)
-        {
-            if(PlayerPrefs.GetInt("DropCat_" + SceneManager.GetActiveScene().name) == 1)
-            {
-                DropCat();
-            }
-        }
+
     }
     private void Update()
     {

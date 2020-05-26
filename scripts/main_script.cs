@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using GoogleMobileAds.Api;
 
 public class main_script : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class main_script : MonoBehaviour
         public bool healByTime = true;
         public float healValue = 0.1f;
 
+    //ads
+    private const string AdRevard = "ca-app-pub-4800162937668095/8685147648";
+
 
     private GameObject restartScreen;
 
@@ -52,6 +56,8 @@ public class main_script : MonoBehaviour
         this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         transform.parent = null;
         this.transform.position = respawnPoint.transform.position;
+        GetComponent<CharacterController2D>().jumpsLeft = GetComponent<CharacterController2D>().maxJumpCount;
+        GetComponent<CharacterController2D>().dashesLeft = GetComponent<CharacterController2D>().maxDashes;
         GameObject.FindGameObjectWithTag("Phantom").GetComponent<Phantom>().ResetPos();
 
         if (deathEvent != null)
@@ -59,6 +65,16 @@ public class main_script : MonoBehaviour
         if (respawnPoint.GetComponent<checkpoint_script>().doCam)
         {
             (GameObject.FindGameObjectWithTag("MainCamera")).GetComponent<CameraFollow>().ResetPos(respawnPoint.GetComponent<checkpoint_script>().lookDirection);
+        }
+
+        Debug.Log("st_ad");
+        InterstitialAd ad = new InterstitialAd(AdRevard);
+        AdRequest request = new AdRequest.Builder().AddTestDevice(AdRequest.TestDeviceSimulator).AddTestDevice("AE367AD48BAEFF52").Build();
+        ad.LoadAd(request);
+        if (ad.IsLoaded())
+        {
+            ad.Show();
+            Debug.Log("da");
         }
     }
     public void ChangeSkin(int id)
@@ -99,7 +115,6 @@ public class main_script : MonoBehaviour
         {
             respawn(checkpoints[PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "CheckpointIndex")]);
         }
-
     }
     private void Update()
     {

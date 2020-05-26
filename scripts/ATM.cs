@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+
 public class ATM : MonoBehaviour
 {
     GameObject main;
@@ -50,6 +52,7 @@ public class ATM : MonoBehaviour
             if (buyOnce)
             {
                 GetComponent<dialogNPC>().startDialogPointer = flagBuyOnce;
+                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_atm_lock_" + transform.position.x + "_" + transform.position.x, 1);
             }
             MovePointer(flagSuccess);
         }
@@ -74,6 +77,10 @@ public class ATM : MonoBehaviour
     }
     private void Start()
     {
+        if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_atm_lock_" + transform.position.x + "_" + transform.position.x) == 1)
+        {
+            GetComponent<dialogNPC>().startDialogPointer = flagBuyOnce;
+        }
         main = GameObject.FindGameObjectWithTag("main");
         dia = GameObject.FindGameObjectWithTag("dialogUi").GetComponent<dialog>();
         text.SetText(value.ToString());

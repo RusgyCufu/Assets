@@ -18,7 +18,7 @@ public class EndLevel : MonoBehaviour
     {
         if (collision == main.GetComponent<CapsuleCollider2D>())
         {
-            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "CheckpointIndex", 0);
+            if(SceneManager.GetActiveScene().name != "MainHub") PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "CheckpointIndex", 0);
             SceneManager.LoadScene(NEXT_LEVEL);
         }
     }

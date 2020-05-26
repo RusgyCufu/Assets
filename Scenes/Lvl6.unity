@@ -1513,7 +1513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded7885a37d650845a7a765c8c310415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NEXT_LEVEL: Scenes/Lvl7
+  NEXT_LEVEL: Scenes/MainHub
 --- !u!61 &306239838
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9816,6 +9816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!19719996 &1110961418
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -11371,10 +11372,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6438327931447576360, guid: f5ac1ae5a9aa0f9428bafc824ea19c26, type: 3}
-      propertyPath: NEXT_LEVEL
-      value: Scenes/MainHub
-      objectReference: {fileID: 0}
     - target: {fileID: 6438327931447576361, guid: f5ac1ae5a9aa0f9428bafc824ea19c26, type: 3}
       propertyPath: m_Name
       value: End

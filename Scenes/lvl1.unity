@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lelel = 1
+  m_text: Level = 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c087f2d4663ac2a479d54f88f811714a, type: 2}
   m_sharedMaterial: {fileID: -5165366145121968330, guid: c087f2d4663ac2a479d54f88f811714a, type: 2}
@@ -17194,6 +17194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!212 &1153440158
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25728,6 +25729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!483693784 &1631691644
 TilemapRenderer:
   m_ObjectHideFlags: 0

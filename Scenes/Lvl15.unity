@@ -1424,6 +1424,14 @@ MonoBehaviour:
   smolCubePos: {x: 0, y: 0, z: 0}
   doLsdCat: 1
   lsdCat: {fileID: 1557948629}
+  tpPos: {x: 0, y: 0, z: 0}
+  doSalt: 0
+  saltOff: []
+  saltOn: []
+  cam: {fileID: 0}
+  salt: 0
+  doGI: 0
+  saltSpeed: 100
 --- !u!114 &138327422 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3100960423915274707, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
@@ -3095,8 +3103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed52a599a22dcd54682516b2b1d0933f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EN: Level = 2
-  RU: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C = 2"
+  EN: Level = 15
+  RU: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C = 15"
 --- !u!114 &392696506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3117,7 +3125,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level = 2
+  m_text: Level = 15
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c087f2d4663ac2a479d54f88f811714a, type: 2}
   m_sharedMaterial: {fileID: -5165366145121968330, guid: c087f2d4663ac2a479d54f88f811714a, type: 2}
@@ -3191,7 +3199,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 392696506}
-    characterCount: 9
+    characterCount: 10
     spriteCount: 0
     spaceCount: 2
     wordCount: 2
@@ -3785,10 +3793,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1957854825}
     m_Modifications:
-    - target: {fileID: 6438327931447576360, guid: f5ac1ae5a9aa0f9428bafc824ea19c26, type: 3}
-      propertyPath: NEXT_LEVEL
-      value: Scenes/Lvl5
-      objectReference: {fileID: 0}
     - target: {fileID: 6438327931447576361, guid: f5ac1ae5a9aa0f9428bafc824ea19c26, type: 3}
       propertyPath: m_Name
       value: EndPortal
@@ -4367,6 +4371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!19719996 &621596417
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -4872,15 +4877,6 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
-  - first: {x: 97, y: 6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
   - first: {x: 112, y: 6, z: 0}
     second:
       serializedVersion: 2
@@ -5260,15 +5256,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
   - first: {x: 173, y: 6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
-  - first: {x: 174, y: 6, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -10832,17 +10819,17 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 710
+  - m_RefCount: 708
     m_Data: {fileID: 11400000, guid: fcd0824060d38f3418d5a4f56da06088, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 710
+  - m_RefCount: 708
     m_Data: {fileID: 21300000, guid: d0c5ae45e51b1a5468c1f44c4ff4e5ae, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileMatrixArray:
-  - m_RefCount: 710
+  - m_RefCount: 708
     m_Data:
       e00: 1
       e01: 0
@@ -10861,7 +10848,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 710
+  - m_RefCount: 708
     m_Data: {r: 0, g: 0, b: 0, a: 1}
   - m_RefCount: 0
     m_Data: {r: -3.8944174e+19, g: -3.8944174e+19, b: -3.8944174e+19, a: -3.8944174e+19}
@@ -26323,10 +26310,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1957854825}
     m_Modifications:
-    - target: {fileID: 6438327931447576360, guid: f5ac1ae5a9aa0f9428bafc824ea19c26, type: 3}
-      propertyPath: NEXT_LEVEL
-      value: Scenes/MainHub
-      objectReference: {fileID: 0}
     - target: {fileID: 6438327931447576361, guid: f5ac1ae5a9aa0f9428bafc824ea19c26, type: 3}
       propertyPath: m_Name
       value: StartPortal

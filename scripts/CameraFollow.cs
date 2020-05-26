@@ -49,7 +49,6 @@ public class CameraFollow : MonoBehaviour
 			lookOffset = new Vector3(5, 3, -25);
 			flipOffset = 3;
 		}
-		//ResetPos(GameObject.FindGameObjectWithTag("main").GetComponent<main_script>().resp.GetComponent<checkpoint_script>().lookDirection);
 	}
 
 	void LateUpdate()

@@ -18,7 +18,7 @@ public class checkpoint_script : MonoBehaviour
 
     void Start()
     {
-        main = ((GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0)).GetComponent<main_script>();
+        main = GameObject.FindGameObjectWithTag("main").GetComponent<main_script>();
         this.gameObject.AddComponent(typeof(ChangePhisicsMat));
         ((ChangePhisicsMat)(GetComponent<ChangePhisicsMat>())).newMat = defaultMat;
         ((ChangePhisicsMat)(GetComponent<ChangePhisicsMat>())).main = main;
@@ -26,7 +26,7 @@ public class checkpoint_script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision == (Collider2D)((GameObject)GameObject.FindGameObjectWithTag("main")).GetComponent<CapsuleCollider2D>());
+        if (collision == GameObject.FindGameObjectWithTag("main").GetComponent<CapsuleCollider2D>());
         {
             if (!open)
             {

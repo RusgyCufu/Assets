@@ -1357,10 +1357,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6438327931447576360, guid: f5ac1ae5a9aa0f9428bafc824ea19c26, type: 3}
-      propertyPath: NEXT_LEVEL
-      value: Scenes/Lvl5
-      objectReference: {fileID: 0}
     - target: {fileID: 6438327931447576361, guid: f5ac1ae5a9aa0f9428bafc824ea19c26, type: 3}
       propertyPath: m_Name
       value: End
@@ -4529,7 +4525,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651183650}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 234736bbe0ee92a43af2a3e4caa96b2d, type: 3}
   m_Name: 
@@ -5123,10 +5119,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6438327931447576360, guid: f5ac1ae5a9aa0f9428bafc824ea19c26, type: 3}
-      propertyPath: NEXT_LEVEL
-      value: Scenes/MainHub
-      objectReference: {fileID: 0}
     - target: {fileID: 6438327931447576361, guid: f5ac1ae5a9aa0f9428bafc824ea19c26, type: 3}
       propertyPath: m_Name
       value: End (1)
@@ -48474,11 +48466,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2528573471615164445, guid: 65e70e6c60c73c74fa14052eb156dab0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 109.27
+      value: 116.66
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164445, guid: 65e70e6c60c73c74fa14052eb156dab0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.28
+      value: 19.33
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164445, guid: 65e70e6c60c73c74fa14052eb156dab0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -68212,8 +68204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed52a599a22dcd54682516b2b1d0933f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EN: Level = 4
-  RU: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C = 4"
+  EN: Level = 16
+  RU: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C = 16"
 --- !u!114 &1959154619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68234,7 +68226,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level = 4
+  m_text: Level = 16
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c087f2d4663ac2a479d54f88f811714a, type: 2}
   m_sharedMaterial: {fileID: -5165366145121968330, guid: c087f2d4663ac2a479d54f88f811714a, type: 2}
@@ -68308,7 +68300,7 @@ MonoBehaviour:
   m_margin: {x: -503.59985, y: -157.87515, z: -493.86182, w: 0}
   m_textInfo:
     textComponent: {fileID: 1959154619}
-    characterCount: 9
+    characterCount: 10
     spriteCount: 0
     spaceCount: 2
     wordCount: 2

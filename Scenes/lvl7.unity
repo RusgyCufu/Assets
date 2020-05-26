@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!1 &32569535 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3530090395269009616, guid: 222a4d823f73dd6449a944ad8aa7022b, type: 3}
@@ -164,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!1001 &40369929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -399,6 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!1001 &92612657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -823,6 +826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!1001 &140385931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1093,6 +1097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!1001 &218120836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1571,6 +1576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!4 &276765136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5828353555782302247, guid: 59ab86f5524f8c34a86e8367bfb0b8e0, type: 3}
@@ -1594,6 +1600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!1001 &300415280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1720,6 +1727,15 @@ MonoBehaviour:
   smolCubePos: {x: 0, y: 0, z: 0}
   doLsdCat: 0
   lsdCat: {fileID: 0}
+  tpPos: {x: 0, y: 0, z: 0}
+  doSalt: 0
+  saltOff: []
+  saltOn: []
+  cam: {fileID: 0}
+  saltOffProfile: {fileID: 0}
+  saltOnProfile: {fileID: 0}
+  salt: 0
+  doGI: 0
 --- !u!1 &325840095 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3530090395269009616, guid: 222a4d823f73dd6449a944ad8aa7022b, type: 3}
@@ -1738,6 +1754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!4 &334959744 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3530090394057949012, guid: 222a4d823f73dd6449a944ad8aa7022b, type: 3}
@@ -1894,6 +1911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!1001 &339811300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2161,6 +2179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!1001 &371833396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2674,6 +2693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!19719996 &507465536
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -7742,6 +7762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!1 &699392187
 GameObject:
   m_ObjectHideFlags: 0
@@ -7796,6 +7817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!1 &707816568
 GameObject:
   m_ObjectHideFlags: 0
@@ -11004,6 +11026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!4 &879692424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5000424543494022601, guid: 0a62b3e294ff8f84baf09d1bd34219a7, type: 3}
@@ -29752,6 +29775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!4 &1001930077 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3530090394057949012, guid: 222a4d823f73dd6449a944ad8aa7022b, type: 3}
@@ -29982,8 +30006,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed52a599a22dcd54682516b2b1d0933f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EN: Level = 2
-  RU: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C = 2"
+  EN: Level = 7
+  RU: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C = 7"
 --- !u!114 &1083105788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30004,7 +30028,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level = 2
+  m_text: Level = 7
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c087f2d4663ac2a479d54f88f811714a, type: 2}
   m_sharedMaterial: {fileID: -5165366145121968330, guid: c087f2d4663ac2a479d54f88f811714a, type: 2}
@@ -30118,6 +30142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!4 &1087416804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3530090394057949012, guid: 222a4d823f73dd6449a944ad8aa7022b, type: 3}
@@ -30535,6 +30560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!4 &1173412330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5000424543494022601, guid: 0a62b3e294ff8f84baf09d1bd34219a7, type: 3}
@@ -31042,6 +31068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!4 &1249407733 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6125645356281333049, guid: d243f58e26a13e64792b8b07a5232468, type: 3}
@@ -31065,6 +31092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!4 &1277514609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1370791496558655479, guid: 78bfa84b8bd4f1d45adf3327f428173e, type: 3}
@@ -32374,6 +32402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!4 &1569128534 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6125645356281333049, guid: d243f58e26a13e64792b8b07a5232468, type: 3}
@@ -32699,6 +32728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!4 &1598516758 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1370791496558655479, guid: 78bfa84b8bd4f1d45adf3327f428173e, type: 3}
@@ -33006,6 +33036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!1001 &1736558253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33562,6 +33593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!1001 &1820668619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33713,6 +33745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!1 &1828439198 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3530090395269009616, guid: 222a4d823f73dd6449a944ad8aa7022b, type: 3}

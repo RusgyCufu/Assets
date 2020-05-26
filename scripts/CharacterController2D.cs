@@ -10,8 +10,8 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] public int maxJumpCount = 2;                                   // Jump count								
 	[SerializeField] private LayerMask m_WhatIsGround;                             // A mask determining what is ground to the character
 	[SerializeField] private Transform m_GroundCheck;                             // A position marking where to check if the player is grounded.
-	[SerializeField] bool ignoreJump = false;
-	[SerializeField] bool doInvertGravity = false;
+	[SerializeField] public bool ignoreJump = false;
+	[SerializeField] public bool doInvertGravity = false;
 
 	[HideInInspector] const float k_GroundedRadius = .1f;  // Radius of the overlap circle to determine if grounded
 	[HideInInspector] private bool m_Grounded;            // Whether or not the player is grounded.
