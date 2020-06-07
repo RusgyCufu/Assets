@@ -15,6 +15,7 @@ public class Key : MonoBehaviour
     {
         target = newTarget;
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        AudioManager.AudioManager.m_instance.PlaySFX("Key");
     }
     public void GoSleep()
     {

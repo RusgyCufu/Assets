@@ -40,6 +40,8 @@ public class OneZero : MonoBehaviour
     {
         if (collision == main.GetComponent<CapsuleCollider2D>())
         {
+            AudioManager.AudioManager.m_instance.PlaySFX("Button");
+
             gameObject.GetComponent<SpriteRenderer>().color = new Vector4(0, 0, 0, 0);
             if (value == 0)
             {

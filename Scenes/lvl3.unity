@@ -7463,6 +7463,7 @@ MonoBehaviour:
   targets:
   - {fileID: 1945055078}
   - {fileID: 1452198281}
+  currentMovingTime: 0
   vel: 0
 --- !u!212 &115198687
 SpriteRenderer:
@@ -8611,6 +8612,7 @@ MonoBehaviour:
   targets:
   - {fileID: 359965838}
   - {fileID: 557930971}
+  currentMovingTime: 0
   vel: 0
 --- !u!212 &309448118
 SpriteRenderer:
@@ -24601,6 +24603,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -25386,6 +25389,7 @@ MonoBehaviour:
   targets:
   - {fileID: 1595607603}
   - {fileID: 1292680564}
+  currentMovingTime: 0
   vel: 0
 --- !u!212 &560322797
 SpriteRenderer:
@@ -27512,7 +27516,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded7885a37d650845a7a765c8c310415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NEXT_LEVEL: Scenes/Lvl4
+  NEXT_LEVEL: Scenes/MainHub
+  unlock: 4
 --- !u!61 &834775149
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30890,6 +30895,7 @@ MonoBehaviour:
   targets:
   - {fileID: 716934405}
   - {fileID: 142783183}
+  currentMovingTime: 0
   vel: 0
 --- !u!212 &1181388218
 SpriteRenderer:
@@ -31731,6 +31737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!212 &1327100350
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34029,6 +34036,7 @@ MonoBehaviour:
   targets:
   - {fileID: 139570002}
   - {fileID: 1428418745}
+  currentMovingTime: 0
   vel: 0
 --- !u!212 &1639093999
 SpriteRenderer:
@@ -34163,6 +34171,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -34309,6 +34318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!483693784 &1650538719
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -35137,6 +35147,7 @@ MonoBehaviour:
   targets:
   - {fileID: 1963728598}
   - {fileID: 1079700241}
+  currentMovingTime: 0
   vel: 0
 --- !u!212 &1748342643
 SpriteRenderer:
@@ -35983,6 +35994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!212 &1843650067
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37030,6 +37042,7 @@ MonoBehaviour:
   targets:
   - {fileID: 957340601}
   - {fileID: 581341911}
+  currentMovingTime: 0
   vel: 0
 --- !u!212 &1996870558
 SpriteRenderer:

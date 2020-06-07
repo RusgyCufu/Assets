@@ -298,7 +298,7 @@ MonoBehaviour:
   - '[;0'
   - ...
   - END
-  charTime: 0.05
+  charTime: 0.02
   charSound: DefaultCharSound
   EN:
   - '{;2;1;Buy ITEM for 228 coins;Cancel'

@@ -150,7 +150,7 @@ public class LvlScripts : MonoBehaviour
                     cam.GetComponent<Animation>().Stop();
                 }
                 cam.GetComponent<Camera>().orthographicSize = 7f;
-                main.GetComponent<movement>().runSpeed = 56.9808f;
+                main.GetComponent<movement>().runSpeed = 60f;
                 if (main.GetComponent<Rigidbody2D>().gravityScale < 0)
                 {
                     main.GetComponent<Rigidbody2D>().gravityScale *= -1;

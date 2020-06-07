@@ -25,6 +25,7 @@ public class KeyEater : MonoBehaviour
                 pod.GetComponent<FollowRobot>().RemoveKey();
                 canUse = false;
                 OnKeyUse.Invoke();
+                AudioManager.AudioManager.m_instance.PlaySFX("KeyOff");
             }
         }
     }

@@ -2674,6 +2674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NEXT_LEVEL: Scenes/Lvl2
+  unlock: 0
 --- !u!61 &580962428
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10441,7 +10442,7 @@ MonoBehaviour:
   doStart: 1
   doUpdate: 0
   doByBool: 1
-  boolName: MainHubunlock
+  boolName: Lvl3unlock
   onTrue:
     m_PersistentCalls:
       m_Calls: []

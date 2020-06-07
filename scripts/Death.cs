@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
@@ -46,13 +47,11 @@ public class Death : MonoBehaviour
             {
                 gameObject.GetComponent<SpriteRenderer>().color = oldColor;
             }
+            PlayerPrefs.SetInt("_game_deaths", PlayerPrefs.GetInt("_game_deaths") + 1);
+            PlayerPrefs.SetInt("_lvl_deaths_" + SceneManager.GetActiveScene().name, PlayerPrefs.GetInt("_lvl_deaths_" + SceneManager.GetActiveScene().name) + 1);
             restartScreen.GetComponent<Canvas>().enabled = true;
-            AudioManager.AudioManager.m_instance.PlaySFX(2);
+            AudioManager.AudioManager.m_instance.PlaySFX("Death");
             Time.timeScale = 0;
-        }
-        else if(collision.gameObject.GetComponent<DamageCat>() != null)
-        {
-            collision.GetComponent<DamageCat>().Damage(dmg);
         }
     }
 }

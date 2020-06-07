@@ -31517,7 +31517,7 @@ PrefabInstance:
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0, type: 3}
       propertyPath: RU.Array.data[31]
       value: "\u0410 \u0441 \u0442\u043E\u0431\u043E\u0439 \u043F\u0440\u0438\u044F\u0442\u043D\u043E
-        \u0438\u043C\u0435\u0442\u044C \u0434\u0435\u043B\u043E (-\u0329\u0329\u0329-\u1D17-\u0329\u0329\u0329\u0329\u0329-)"
+        \u0438\u043C\u0435\u0442\u044C \u0434\u0435\u043B\u043E ($_$)"
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0, type: 3}
       propertyPath: RU.Array.data[30]
@@ -31652,7 +31652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0, type: 3}
       propertyPath: EN.Array.data[31]
-      value: "It's nice to deal with you (-\u0329\u0329\u0329-\u1D17-\u0329\u0329\u0329\u0329\u0329-)"
+      value: It's nice to deal with you ($_$)
       objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0, type: 3}
       propertyPath: EN.Array.data[32]
@@ -32132,6 +32132,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6438327931447576360, guid: f5ac1ae5a9aa0f9428bafc824ea19c26, type: 3}
+      propertyPath: unlock
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6438327931447576361, guid: f5ac1ae5a9aa0f9428bafc824ea19c26, type: 3}
       propertyPath: m_Name
       value: End

@@ -4261,6 +4261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NEXT_LEVEL: Scenes/MainHub
+  unlock: 14
 --- !u!61 &686265487
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11829,6 +11830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NEXT_LEVEL: Scenes/MainHub
+  unlock: 0
 --- !u!61 &1726667252
 BoxCollider2D:
   m_ObjectHideFlags: 0

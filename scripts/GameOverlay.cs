@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class GameOverlay : MonoBehaviour
 {
     private Canvas pauseOverlay;
-    private Canvas notificationOverlay;
+    private GameObject notificationOverlay;
 
     private GameObject main;
     private bool isPaused = false;
@@ -32,7 +32,8 @@ public class GameOverlay : MonoBehaviour
     void Start()
     {
         pauseOverlay = GetChildWithName(this.gameObject, "pauseOverlay").GetComponent<Canvas>();
-        notificationOverlay = GetChildWithName(this.gameObject, "NotificationOverlay").GetComponent<Canvas>();
+        notificationOverlay = GetChildWithName(this.gameObject, "NotificationOverlay");
+        CancelNotification();
         main = (GameObject)GameObject.FindGameObjectsWithTag("main").GetValue(0);
         //GetChildWithName(this.gameObject, "RestartOverlay").SetActive(false);
 
@@ -119,7 +120,7 @@ public class GameOverlay : MonoBehaviour
 
     public void CancelNotification()
     {
-        notificationOverlay.enabled = false;
+        notificationOverlay.SetActive(false);
     }
     public void Notification(int action)
     {
@@ -165,11 +166,11 @@ public class GameOverlay : MonoBehaviour
         }
         
 
-        notificationOverlay.enabled = true;
+        notificationOverlay.SetActive(true);
     }
     public void OnOkClick()
     {
-        notificationOverlay.enabled = false;
+        notificationOverlay.SetActive(false);
         if (okAction == 0)
         {
             CancelNotification();

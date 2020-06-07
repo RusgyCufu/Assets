@@ -14,7 +14,8 @@ public class checkpoint_script : MonoBehaviour
     [SerializeField] private Sprite newSprite;
     [SerializeField] public PhysicsMaterial2D defaultMat;
     [SerializeField] public GameObject part;
-    private bool open = false;
+    [SerializeField] public bool ignorePart = false;
+   private bool open = false;
 
     void Start()
     {
@@ -35,9 +36,10 @@ public class checkpoint_script : MonoBehaviour
                 {
                     open = true;
                     sprite.sprite = newSprite;
+                    if (Time.timeSinceLevelLoad > 2f) AudioManager.AudioManager.m_instance.PlaySFX("Checkpoint");
                 }
-                AudioManager.AudioManager.m_instance.PlaySFX("Checkpoint");
-                part.GetComponent<ParticleSystem>().Play();
+                
+                if(ignorePart == false) part.GetComponent<ParticleSystem>().Play();
                 for (int j = 0; j < main.checkpoints.Length; ++j)
                 {
                     var i = main.GetComponent<main_script>().checkpoints[j];

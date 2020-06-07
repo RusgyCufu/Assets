@@ -122,7 +122,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852688337679973275}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -518,7 +518,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0.1}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24.999878, y: 25}
+  m_AnchoredPosition: {x: -24.999756, y: 25}
   m_SizeDelta: {x: -50, y: -50}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &1795787952962453083
@@ -849,7 +849,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab98b66288df7b4fa182075f2f12bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axisName: Horizontal
   axisValue: -1
 --- !u!1 &4234610295995102676
 GameObject:
@@ -989,7 +988,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -23.000122, y: 27.000122}
+  m_AnchoredPosition: {x: -23, y: 27.000122}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &4310621723909474906
@@ -3076,7 +3075,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 72
+  m_fontSize: 69.75
   m_fontSizeBase: 124.5
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4097,7 +4096,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.02709961, y: 0.013549805}
+  m_AnchoredPosition: {x: 0.026855469, y: 0.013549805}
   m_SizeDelta: {x: -0.100097656, y: 0.049987793}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6535265940727631356
@@ -4234,7 +4233,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 229.2
+  m_fontSize: 184.15
   m_fontSizeBase: 143.25
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4317,6 +4316,7 @@ GameObject:
   - component: {fileID: 4447121356010732267}
   - component: {fileID: 6129455212360408435}
   - component: {fileID: 5805927105572697835}
+  - component: {fileID: 8428043948638481766}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4461,6 +4461,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8428043948638481766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8103088230687766021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed52a599a22dcd54682516b2b1d0933f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EN: Teleport to the next checkpoint by watching an ad
+  RU: "\u0422\u0435\u043B\u0435\u043F\u043E\u0440\u0442\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F
+    \u043D\u0430 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 \u0447\u0435\u043A\u043F\u043E\u0438\u043D\u0442
+    \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0432 \u0440\u0435\u043A\u043B\u0430\u043C\u0443"
 --- !u!1 &8404974757848266917
 GameObject:
   m_ObjectHideFlags: 0
@@ -4727,7 +4743,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab98b66288df7b4fa182075f2f12bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axisName: Horizontal
   axisValue: 1
 --- !u!1 &8739577539781549890
 GameObject:
@@ -5258,7 +5273,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 72
+  m_fontSize: 69.75
   m_fontSizeBase: 124.5
   m_fontWeight: 400
   m_enableAutoSizing: 1

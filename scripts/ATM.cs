@@ -61,6 +61,20 @@ public class ATM : MonoBehaviour
             MovePointer(flagNotEnoughMoney);
         }
     }
+    public void BuyByAd()
+    {
+        //check ad
+        bool adWatch = true;
+        if (adWatch)
+        {
+            value = 0;
+        }
+        else
+        {
+            value = 99999;
+        }
+        Buy();
+    }
     void MovePointer(int flag)
     {
         flag -= 1;

@@ -50,8 +50,14 @@ public class dialog : MonoBehaviour
         GetChildWithName(s1.gameObject, "text").GetComponent<TMPro.TextMeshProUGUI>().SetText(content1);
         GetChildWithName(s2.gameObject, "text").GetComponent<TMPro.TextMeshProUGUI>().SetText(content2);
 
-        GetChildWithName(s1.gameObject, "text").GetComponent<TextAnimation>().StartAnimation(content1, npc.charTime);
-        GetChildWithName(s2.gameObject, "text").GetComponent<TextAnimation>().StartAnimation(content2, npc.charTime);
+        if(content1.Length > content2.Length)
+        {
+            GetChildWithName(s1.gameObject, "text").GetComponent<TextAnimation>().StartAnimation(content1, npc.charTime, npc.charSound);
+        }
+        else
+        {
+            GetChildWithName(s2.gameObject, "text").GetComponent<TextAnimation>().StartAnimation(content2, npc.charTime, npc.charSound);
+        }
     }
     public void Display() {
         //Debug.Log(dialogPointer);

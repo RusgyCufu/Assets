@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-using GoogleMobileAds.Api;
 
 public class main_script : MonoBehaviour
 {
@@ -66,7 +65,7 @@ public class main_script : MonoBehaviour
         {
             (GameObject.FindGameObjectWithTag("MainCamera")).GetComponent<CameraFollow>().ResetPos(respawnPoint.GetComponent<checkpoint_script>().lookDirection);
         }
-
+        /*
         Debug.Log("st_ad");
         InterstitialAd ad = new InterstitialAd(AdRevard);
         AdRequest request = new AdRequest.Builder().AddTestDevice(AdRequest.TestDeviceSimulator).AddTestDevice("AE367AD48BAEFF52").Build();
@@ -75,7 +74,7 @@ public class main_script : MonoBehaviour
         {
             ad.Show();
             Debug.Log("da");
-        }
+        }*/
     }
     public void ChangeSkin(int id)
     {
@@ -100,7 +99,6 @@ public class main_script : MonoBehaviour
         PlayerPrefs.SetString("ContinueLvl", SceneManager.GetActiveScene().name);
         restartScreen = (GameObject)GameObject.FindGameObjectsWithTag("Restart").GetValue(0);
         ChangeSkin(PlayerPrefs.GetInt("active_skin"));
-        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "unlock", 1);
 
         if (PlayerPrefs.HasKey("Coins") == false)
         {
@@ -136,6 +134,10 @@ public class main_script : MonoBehaviour
         {
             Death();
         }
+
+        PlayerPrefs.SetFloat("_lvl_time_" + SceneManager.GetActiveScene().name, PlayerPrefs.GetFloat("_lvl_time_" + SceneManager.GetActiveScene().name) + Time.deltaTime);
+        PlayerPrefs.SetFloat("_game_time", PlayerPrefs.GetFloat("_game_time") + Time.deltaTime);
+        RewriteCoins();
     }
     void OnParticleCollision(GameObject other)
     {

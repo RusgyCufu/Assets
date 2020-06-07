@@ -54,6 +54,7 @@ public class movement : MonoBehaviour
 		}
 		if (act && !isParalyzed)
 		{
+			
 			GameObject[] npcs;
 			npcs = GameObject.FindGameObjectsWithTag("can_dialog");
 
@@ -62,11 +63,13 @@ public class movement : MonoBehaviour
 			GameObject dialogNPC = null;
 			foreach (GameObject i in npcs)
 			{
+				Debug.Log("act");
 				float distance = (main.transform.position - i.transform.position).magnitude;
 
 				if(distance <= 5)
 				{
-					if(findNPC == false)
+					Debug.Log("act1");
+					if (findNPC == false)
 					{
 						minDistance = distance;
 						dialogNPC = i;
@@ -82,7 +85,7 @@ public class movement : MonoBehaviour
 					findNPC = true;
 				}
 			}
-			if(findNPC)
+			if (findNPC)
 			{
 				dialogNPC.GetComponent<dialogNPC>().tryDialog();
 				CameraFollow cam = ((GameObject)GameObject.FindGameObjectsWithTag("MainCamera").GetValue(0)).GetComponent<CameraFollow>();

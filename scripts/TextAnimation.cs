@@ -11,8 +11,8 @@ public class TextAnimation : MonoBehaviour
     private string text;
 
     private float animTime = 0f;
-    private bool anim = false;
-
+    public bool anim = false;
+    public bool start = false;
     private int lastSound = 0;
 
     public void StartAnimation(string newText = null, float newCharTime = 0.05f, string sound = "DefaultCharSound")
@@ -38,6 +38,10 @@ public class TextAnimation : MonoBehaviour
         this.gameObject.GetComponent<TMPro.TextMeshProUGUI>().SetText(text);
     }
 
+    private void Start()
+    {
+        StartAnimation(null, 0.005f);
+    }
     void Update()
     {
         if (anim)

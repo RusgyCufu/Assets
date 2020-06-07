@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndLevel : MonoBehaviour
 {
     [SerializeField] public string NEXT_LEVEL;
+    [SerializeField] public int unlock;
 
     private GameObject main;
 
@@ -19,6 +20,8 @@ public class EndLevel : MonoBehaviour
         if (collision == main.GetComponent<CapsuleCollider2D>())
         {
             if(SceneManager.GetActiveScene().name != "MainHub") PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "CheckpointIndex", 0);
+            //AudioManager.AudioManager.m_instance.PlaySFX("Portal");
+            PlayerPrefs.SetInt("Lvl" + unlock.ToString() + "unlock", 1);
             SceneManager.LoadScene(NEXT_LEVEL);
         }
     }

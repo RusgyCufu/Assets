@@ -106,11 +106,11 @@ namespace AudioManager
 
         private void PlayNextMusicTrack()
         {
-            m_currentMusic.m_audioSource.Play();
             if (!m_currentMusic.m_fade && m_prevMusic.m_audioSource != null)
             {
                 m_prevMusic.m_audioSource.Stop();
             }
+            m_currentMusic.m_audioSource.Play();
             if (m_currentMusic.m_fade)
             {
                 StartCoroutine(FadeIn(m_currentMusic));

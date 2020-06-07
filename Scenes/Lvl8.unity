@@ -9855,6 +9855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hide: 0
+  dmg: 0.1
 --- !u!19719996 &130257919
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -12399,6 +12400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NEXT_LEVEL: Scenes/MainHub
+  unlock: 0
 --- !u!61 &456848926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18450,6 +18452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NEXT_LEVEL: Scenes/MainHub
+  unlock: 9
 --- !u!61 &1352162919
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20060,6 +20063,20 @@ MonoBehaviour:
   Zhabka4: {fileID: 0}
   Zhabka5: {fileID: 0}
   dropDelay: 1
+  cubes: []
+  newCubeTime: 12
+  smolCube: {fileID: 0}
+  smolCubePos: {x: 0, y: 0, z: 0}
+  doLsdCat: 0
+  lsdCat: {fileID: 0}
+  tpPos: {x: 0, y: 0, z: 0}
+  doSalt: 0
+  saltOff: []
+  saltOn: []
+  cam: {fileID: 0}
+  salt: 0
+  doGI: 0
+  saltSpeed: 100
 --- !u!114 &1532871964
 MonoBehaviour:
   m_ObjectHideFlags: 0

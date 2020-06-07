@@ -87,9 +87,12 @@ public class CharacterController2D : MonoBehaviour
 			{
 				m_Grounded = true;
 				if (!wasGrounded)
+				{
 					OnLandEvent.Invoke();
+					AudioManager.AudioManager.m_instance.PlaySFX("Land");
+				}
 
-				if(colliders[i].tag == "MovingPlatform")
+				if (colliders[i].tag == "MovingPlatform")
 				{
 					onPlatform = true;
 					transform.parent = colliders[i].transform;
@@ -155,6 +158,7 @@ public class CharacterController2D : MonoBehaviour
 			dashesLeft -= 1;
 			isDashing = true;
 			dashTimeLeft = dashTime;
+			AudioManager.AudioManager.m_instance.PlaySFX("Dash");
 		}
 	}
 	private void Flip()

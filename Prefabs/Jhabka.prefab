@@ -471,6 +471,10 @@ PrefabInstance:
       propertyPath: charTime
       value: 0.00000001
       objectReference: {fileID: 0}
+    - target: {fileID: 2528573471615164449, guid: 65e70e6c60c73c74fa14052eb156dab0, type: 3}
+      propertyPath: charSound
+      value: Zhabka
+      objectReference: {fileID: 0}
     - target: {fileID: 2528573471615164450, guid: 65e70e6c60c73c74fa14052eb156dab0, type: 3}
       propertyPath: m_Simulated
       value: 0

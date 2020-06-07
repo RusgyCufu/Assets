@@ -106,7 +106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695927481961496313}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 2.62, z: -45.043945}
+  m_LocalPosition: {x: 0, y: 2.62, z: -45.043945}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children: []
   m_Father: {fileID: 1695927482924189747}
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isParalyzed: 0
   controller: {fileID: 1695927482924189710}
-  runSpeed: 56.9808
+  runSpeed: 60
   jumpInput: 0
   actInput: 0
 --- !u!61 &2545636264639295777

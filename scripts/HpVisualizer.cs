@@ -34,10 +34,6 @@ public class HpVisualizer : MonoBehaviour
     void Update()
     {
         hp = main.GetComponent<main_script>().hp;
-        if (doCat)
-        {
-            hp = cat.GetComponent<Boss>().hp;
-        }
         float tmp = (1f - hp);
         if (invert == false)
         {

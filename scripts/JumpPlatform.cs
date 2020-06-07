@@ -28,6 +28,7 @@ public class JumpPlatform : MonoBehaviour
             m_Rigidbody2D.AddRelativeForce(new Vector2(0f, forceForOthers));
             //Debug.Log(collision.gameObject);
         }
+        AudioManager.AudioManager.m_instance.PlaySFX("JumpPlatform");
     }
 
 }

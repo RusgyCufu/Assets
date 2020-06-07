@@ -21,7 +21,7 @@ public class MovingPlatform : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (move)
         {
@@ -37,7 +37,7 @@ public class MovingPlatform : MonoBehaviour
 
             // moving
             Vector3 returnPos;
-            currentMovingTime += Time.deltaTime;
+            currentMovingTime += Time.fixedDeltaTime;
             if (currentMovingTime >= movingTime)
             {
                 if (doOnce)

@@ -7,6 +7,9 @@ public class Water : MonoBehaviour
     [Range(0f, 40f)] public float viscosity = 20f;
     private GameObject main;
 
+    private float timeIn = 0f;
+    private float timeOut = 0f;
+
     void Start()
     {
         main = GameObject.FindGameObjectWithTag("main");
@@ -15,6 +18,24 @@ public class Water : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         GetChildWithName(GameObject.FindGameObjectWithTag("Phantom"), "Bubbles").GetComponent<ParticleSystem>().Stop();
+
+        //audio
+        if (timeIn >= 1f && timeOut >= 1f)
+        {
+            AudioManager.AudioManager.m_instance.PlaySFX("WaterOut");
+            timeIn = 0f;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision == main.GetComponent<CapsuleCollider2D>())
+        {
+            if (timeIn >= 1f && timeOut >= 1f)
+            {
+                AudioManager.AudioManager.m_instance.PlaySFX("WaterIn");
+                timeOut = 0f;
+            }
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -41,5 +62,11 @@ public class Water : MonoBehaviour
         {
             return null;
         }
+    }
+
+    private void Update()
+    {
+        timeIn += Time.deltaTime;
+        timeOut += Time.deltaTime;
     }
 }
