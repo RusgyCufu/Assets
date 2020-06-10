@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace AudioManager
 {
@@ -21,6 +22,7 @@ namespace AudioManager
 
         private void Awake()
         {
+            transform.parent = null;
             DontDestroyOnLoad(gameObject);
 
             CreateInstance();
@@ -37,11 +39,42 @@ namespace AudioManager
             if (!m_instance)
             {
                 m_instance = this;
+                m_instance.PlayLvlMusic();
+                m_instance.PlayLvlMusic();
             }
             else
             {
+                m_instance.PlayLvlMusic();
+                m_instance.PlayLvlMusic();
                 Destroy(gameObject);
             }
+        }
+
+        private void PlayLvlMusic()
+        {
+            string name = SceneManager.GetActiveScene().name;
+            if      (name == "Lvl0")              PlayMusic("Night");
+            else if (name == "Lvl1")              PlayMusic("Factory");
+            else if (name == "Lvl2")              PlayMusic("Ordinary");
+            else if (name == "Lvl3")              PlayMusic("Factory");
+            else if (name == "Lvl4")              PlayMusic("Ordinary");
+            else if (name == "Lvl5")              PlayMusic("Puzzle");
+            else if (name == "Lvl6")              PlayMusic("Cave");
+            else if (name == "Lvl7")              PlayMusic("Night");
+            else if (name == "Lvl8")              PlayMusic("Ordinary");
+            else if (name == "Lvl9")              PlayMusic("Night");
+            else if (name == "Lvl10")             PlayMusic("Rain");
+            else if (name == "Lvl11")             PlayMusic("Ordinary");
+            else if (name == "Lvl12")             PlayMusic("Snow");
+            else if (name == "Lvl13")             PlayMusic("Ordinary");
+            else if (name == "Lvl14")             PlayMusic("Puzzle");
+            else if (name == "Lvl15")             PlayMusic("");
+            else if (name == "Lvl16")             PlayMusic("");
+            else if (name == "Lvl17")             PlayMusic("");
+            else if (name == "Lvl18")             PlayMusic("Night");
+            else if (name == "Lvl19")             PlayMusic("Ordinary");
+            else if (name == "Lvl20")             PlayMusic("Puzzle");
+            else if (name == "SpacetoadsGallery") PlayMusic("");
         }
 
         private void SetUpAudioArray(AudioData[] _array)

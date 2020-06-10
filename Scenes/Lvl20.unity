@@ -17533,6 +17533,7 @@ MonoBehaviour:
   Zhabka3: {fileID: 0}
   Zhabka4: {fileID: 0}
   Zhabka5: {fileID: 0}
+  ActiveZhabka: {fileID: 0}
   dropDelay: 1
   cubes: []
   newCubeTime: 12
@@ -17548,6 +17549,8 @@ MonoBehaviour:
   salt: 0
   doGI: 0
   saltSpeed: 100
+  stupidCode: 0
+  stupidCode1: 0
 --- !u!4 &1154100650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5828353555782302247, guid: 59ab86f5524f8c34a86e8367bfb0b8e0, type: 3}

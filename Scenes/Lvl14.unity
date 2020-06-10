@@ -1731,7 +1731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
       propertyPath: EN.Array.data[5]
-      value: The color of the 2 toad - black
+      value: END
       objectReference: {fileID: 0}
     - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
       propertyPath: EN.Array.data[10]
@@ -1754,6 +1754,14 @@ PrefabInstance:
       value: "{;2;1;\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C
         \u0440\u0435\u043A\u043B\u0430\u043C\u0443, \u0447\u0442\u043E\u0431\u044B
         \u0443\u0437\u043D\u0430\u0442\u044C \u0446\u0432\u0435\u0442 2 \u0436\u0430\u0431\u043A\u0438;\u041E\u0442\u043C\u0435\u043D\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
+      propertyPath: EN.Array.data[3]
+      value: Everething is OK :)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
+      propertyPath: EN.Array.data[4]
+      value: The color of the 2 toad - black
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
@@ -4257,7 +4265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
       propertyPath: EN.Array.data[5]
-      value: The color of the 5 toad - green
+      value: END
       objectReference: {fileID: 0}
     - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
       propertyPath: EN.Array.data[10]
@@ -4280,6 +4288,14 @@ PrefabInstance:
       value: "{;2;1;\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C
         \u0440\u0435\u043A\u043B\u0430\u043C\u0443, \u0447\u0442\u043E\u0431\u044B
         \u0443\u0437\u043D\u0430\u0442\u044C \u0446\u0432\u0435\u0442 5 \u0436\u0430\u0431\u043A\u0438;\u041E\u0442\u043C\u0435\u043D\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
+      propertyPath: EN.Array.data[3]
+      value: Everething is OK :)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
+      propertyPath: EN.Array.data[4]
+      value: The color of the 5 toad - green
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
@@ -4728,6 +4744,7 @@ MonoBehaviour:
   Zhabka3: {fileID: 1968331553}
   Zhabka4: {fileID: 274624411}
   Zhabka5: {fileID: 619483086}
+  ActiveZhabka: {fileID: 1879449427}
   dropDelay: 0.37
   cubes: []
   newCubeTime: 12
@@ -4743,6 +4760,8 @@ MonoBehaviour:
   salt: 0
   doGI: 0
   saltSpeed: 100
+  stupidCode: 0
+  stupidCode1: 0
 --- !u!114 &981847061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5354,7 +5373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
       propertyPath: EN.Array.data[5]
-      value: The color of the 4 toad - default
+      value: END
       objectReference: {fileID: 0}
     - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
       propertyPath: EN.Array.data[10]
@@ -5377,6 +5396,14 @@ PrefabInstance:
       value: "{;2;1;\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C
         \u0440\u0435\u043A\u043B\u0430\u043C\u0443, \u0447\u0442\u043E\u0431\u044B
         \u0443\u0437\u043D\u0430\u0442\u044C \u0446\u0432\u0435\u0442 4 \u0436\u0430\u0431\u043A\u0438;\u041E\u0442\u043C\u0435\u043D\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
+      propertyPath: EN.Array.data[3]
+      value: Everething is OK :)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
+      propertyPath: EN.Array.data[4]
+      value: The color of the 4 toad - default
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
@@ -8863,7 +8890,7 @@ Transform:
   - {fileID: 406752388}
   - {fileID: 1578899484}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1364336812 stripped
 Transform:
@@ -9911,6 +9938,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1879449427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2964173936188386043, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
+  m_PrefabInstance: {fileID: 157362303058707275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1924160164
 GameObject:
   m_ObjectHideFlags: 0
@@ -10774,7 +10806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
       propertyPath: EN.Array.data[5]
-      value: The color of the 3 toad - red
+      value: END
       objectReference: {fileID: 0}
     - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
       propertyPath: EN.Array.data[10]
@@ -10797,6 +10829,14 @@ PrefabInstance:
       value: "{;2;1;\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C
         \u0440\u0435\u043A\u043B\u0430\u043C\u0443, \u0447\u0442\u043E\u0431\u044B
         \u0443\u0437\u043D\u0430\u0442\u044C \u0446\u0432\u0435\u0442 3 \u0436\u0430\u0431\u043A\u0438;\u041E\u0442\u043C\u0435\u043D\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
+      propertyPath: EN.Array.data[3]
+      value: Everething is OK :)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
+      propertyPath: EN.Array.data[4]
+      value: The color of the 3 toad - red
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
@@ -10827,6 +10867,178 @@ PrefabInstance:
     - target: {fileID: 350529375110376510, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: m_textInfo.pageCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToShowEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToLoadEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdOpeningEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdLoadedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: LvlScripts, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: AdManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 981847060}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ZhabkaAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToShowEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToShowEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToShowEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 981847060}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToShowEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LvlScripts, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToShowEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ZhabkiAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToShowEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToLoadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToLoadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToLoadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 981847060}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToLoadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LvlScripts, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToLoadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ZhabkiAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToLoadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdOpeningEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdOpeningEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdOpeningEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 981847060}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdOpeningEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LvlScripts, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdOpeningEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ZhabkiAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdOpeningEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdOpeningEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdLoadedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdLoadedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdLoadedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 981847060}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdLoadedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LvlScripts, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdLoadedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ZhabkiAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdLoadedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdLoadedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToLoadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 362823672766469463, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnAdFailedToShowEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 527925571155626471, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: m_textInfo.characterCount
@@ -11004,6 +11216,14 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 964699621069312515, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964699621069312515, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1312736308384198726, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: m_textInfo.characterCount
       value: 3
@@ -11024,13 +11244,21 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1312736308384198726, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
     - target: {fileID: 1645121651467525772, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: _GroundCast
       value: 
       objectReference: {fileID: 1702892662}
-    - target: {fileID: 2017222474298150298, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
+    - target: {fileID: 1911205657141781027, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 981847060}
+    - target: {fileID: 1911205657141781027, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ZhabkaAd
       objectReference: {fileID: 0}
     - target: {fileID: 2521428464601792254, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: m_textInfo.characterCount
@@ -11047,6 +11275,10 @@ PrefabInstance:
     - target: {fileID: 2521428464601792254, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: m_textInfo.pageCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521428464601792254, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: m_fontSize
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 2623307942461639690, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: forceY
@@ -11180,6 +11412,14 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3412669450416217664, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 981847060}
+    - target: {fileID: 3412669450416217664, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ZhabkaAd
+      objectReference: {fileID: 0}
     - target: {fileID: 3684959128293506785, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 962
@@ -11211,10 +11451,6 @@ PrefabInstance:
     - target: {fileID: 4321609162570711662, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: m_SortingLayer
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4321609162570711663, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4360036515652660813, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: m_Name
@@ -11458,6 +11694,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5336617605191221127, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443059880502104848, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443059880502104848, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6502501191808854277, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
@@ -12126,7 +12370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
       propertyPath: EN.Array.data[5]
-      value: The color of the 1 toad - blue
+      value: END
       objectReference: {fileID: 0}
     - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
       propertyPath: EN.Array.data[10]
@@ -12139,6 +12383,14 @@ PrefabInstance:
     - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
       propertyPath: RU.Array.data[10]
       value: "\u0426\u0432\u0435\u0442 1 \u0436\u0430\u0431\u043A\u0438 - \u0441\u0438\u043D\u0438\u0439"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
+      propertyPath: EN.Array.data[3]
+      value: Everething is OK :)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964173936188386044, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
+      propertyPath: EN.Array.data[4]
+      value: The color of the 1 toad - blue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60cfcf2f02f7a17499a5bb9a18668dae, type: 3}
@@ -12199,7 +12451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7326607369815301099, guid: 1ab81a682a5f5764fb7e543f0a7d8230, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7326607369815301099, guid: 1ab81a682a5f5764fb7e543f0a7d8230, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

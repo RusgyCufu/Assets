@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using GoogleMobileAds.Api;
 
 public class st_menu : MonoBehaviour
 {
     [SerializeField] public string DEFAULT_LVL;
     [SerializeField] TMPro.TextMeshProUGUI statsText;
 
+
+    #region main
     public void CopyToClipboard()
     {
         string s = statsText.text;
@@ -19,6 +21,8 @@ public class st_menu : MonoBehaviour
     }
     void Start()
     {
+        
+
         AudioManager.AudioManager.m_instance.PlayMusic("Menu");
         if (PlayerPrefs.HasKey("buttonsTransparency") == false)
         {
@@ -89,4 +93,5 @@ public class st_menu : MonoBehaviour
         //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
+    #endregion main
 }

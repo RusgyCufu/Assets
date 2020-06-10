@@ -15,6 +15,7 @@ public class LvlScripts : MonoBehaviour
     public GameObject Zhabka3;
     public GameObject Zhabka4;
     public GameObject Zhabka5;
+    public GameObject ActiveZhabka;
     [Range(0f,2f)] public float dropDelay = 1f;
     private bool zhabaYES = false;
     private float dropTimer = 0f;
@@ -38,6 +39,11 @@ public class LvlScripts : MonoBehaviour
     public bool doGI = false;
     public float saltSpeed = 100f;
 
+
+    public bool stupidCode = false;
+    public bool stupidCode1 = false;
+
+
     void Start()
     {
         main = GameObject.FindGameObjectWithTag("main");
@@ -56,6 +62,11 @@ public class LvlScripts : MonoBehaviour
         Destroy(Zhabka3.gameObject);
         Destroy(Zhabka4.gameObject);
         Destroy(Zhabka5.gameObject);
+    }
+    public void ZhabkaAd(bool ass)
+    {
+        stupidCode = true;
+        stupidCode1 = ass;
     }
     public void ResetLevel(int checkpoint)
     {
@@ -158,6 +169,11 @@ public class LvlScripts : MonoBehaviour
                 main.GetComponent<CharacterController2D>().ignoreJump = false;
                 main.GetComponent<CharacterController2D>().doInvertGravity = false;
             }
+        }
+        if (stupidCode)
+        {
+            stupidCode = false;
+            ActiveZhabka.GetComponent<ATM>().FinishBuyByAd(stupidCode1);
         }
     }
 }

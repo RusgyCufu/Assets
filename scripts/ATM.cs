@@ -21,6 +21,7 @@ public class ATM : MonoBehaviour
         public int skinID = 0;
         public GameObject mainATM;
 
+
     GameObject GetChildWithName(GameObject obj, string name)
     {
         Transform trans = obj.transform;
@@ -63,8 +64,16 @@ public class ATM : MonoBehaviour
     }
     public void BuyByAd()
     {
-        //check ad
-        bool adWatch = true;
+        main.GetComponent<LvlScripts>().ActiveZhabka = this.gameObject;
+
+        value = 99999;
+        Buy();
+
+        AdManager.AdManager.m_instance.ShowRewardedAd();
+    }
+    public void FinishBuyByAd(bool adWatch)
+    {
+        Debug.Log("FinishBuyByAd");
         if (adWatch)
         {
             value = 0;
@@ -81,7 +90,6 @@ public class ATM : MonoBehaviour
         dia.dialogPointer = flag;
         dia.Display();
     }
-
     public void SetSkin()
     {
         if (PlayerPrefs.GetInt("unlock_skin" + skinID.ToString()) != 0)
@@ -110,9 +118,7 @@ public class ATM : MonoBehaviour
             GetChildWithName(mainATM, "Sprite").GetComponent<ActionByVar>().boolName = "unlock_skin" + skinID.ToString();
         }
     }
-    // Update is called once per frame
     void Update()
     {
-        
     }
 }

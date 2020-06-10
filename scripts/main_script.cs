@@ -30,11 +30,12 @@ public class main_script : MonoBehaviour
         public bool healByTime = true;
         public float healValue = 0.1f;
 
-    //ads
-    private const string AdRevard = "ca-app-pub-4800162937668095/8685147648";
-
-
     private GameObject restartScreen;
+
+    //shit code
+    public GameOverlay GO;
+    public bool waitTp = false;
+    public bool adComplite = false;
 
     void RewriteCoins()
     {
@@ -100,14 +101,8 @@ public class main_script : MonoBehaviour
         restartScreen = (GameObject)GameObject.FindGameObjectsWithTag("Restart").GetValue(0);
         ChangeSkin(PlayerPrefs.GetInt("active_skin"));
 
-        if (PlayerPrefs.HasKey("Coins") == false)
-        {
-            PlayerPrefs.SetInt("Coins", 0);
-        }
-        else
-        {
-            coins = PlayerPrefs.GetInt("Coins");
-        }
+        if (PlayerPrefs.HasKey("Coins") == false) PlayerPrefs.SetInt("Coins", 0);
+        else coins = PlayerPrefs.GetInt("Coins");
 
         if (debug == false)
         {
@@ -116,6 +111,13 @@ public class main_script : MonoBehaviour
     }
     private void Update()
     {
+        if (waitTp && adComplite)
+        {
+            adComplite = false;
+            waitTp = false;
+            GO.NextCheckpoint();
+            Debug.Log("next");
+        }
         if (hp < 0f)
         {
             hp = 0f;
@@ -138,6 +140,10 @@ public class main_script : MonoBehaviour
         PlayerPrefs.SetFloat("_lvl_time_" + SceneManager.GetActiveScene().name, PlayerPrefs.GetFloat("_lvl_time_" + SceneManager.GetActiveScene().name) + Time.deltaTime);
         PlayerPrefs.SetFloat("_game_time", PlayerPrefs.GetFloat("_game_time") + Time.deltaTime);
         RewriteCoins();
+    }
+    public void AdFin()
+    {
+        adComplite = true;
     }
     void OnParticleCollision(GameObject other)
     {

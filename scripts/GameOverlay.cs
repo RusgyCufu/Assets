@@ -15,6 +15,8 @@ public class GameOverlay : MonoBehaviour
 
     private int okAction;
 
+    private int language;
+
     GameObject GetChildWithName(GameObject obj, string name)
     {
         Transform trans = obj.transform;
@@ -28,9 +30,9 @@ public class GameOverlay : MonoBehaviour
             return null;
         }
     }
-
     void Start()
     {
+        language = PlayerPrefs.GetInt("Language");
         pauseOverlay = GetChildWithName(this.gameObject, "pauseOverlay").GetComponent<Canvas>();
         notificationOverlay = GetChildWithName(this.gameObject, "NotificationOverlay");
         CancelNotification();
@@ -110,13 +112,6 @@ public class GameOverlay : MonoBehaviour
     // 1 = skip by ad
     // 2 = skip by ticket
     // 3 = last checkpoint
-    //
-    //
-    //
-    //
-    //
-    //
-    //
 
     public void CancelNotification()
     {
@@ -146,6 +141,8 @@ public class GameOverlay : MonoBehaviour
         else if(action == 1)
         {
             GetChildWithName(note, "Text (TMP)").GetComponent<TMPro.TextMeshProUGUI>().SetText(
+                language == 1?
+                "Вы действительно хотите посмотреть рекламу, чтобы телепортироваться на следующий чекпоинт?" :
                 "You really want to watch an Ad to teleport to the next checkpoint?"
                 );
             okAction = 1;
@@ -160,7 +157,9 @@ public class GameOverlay : MonoBehaviour
         else if(action == 3)
         {
             GetChildWithName(note, "Text (TMP)").GetComponent<TMPro.TextMeshProUGUI>().SetText(
-                "You allready at the last checkpoint, just go to the portal)"
+                language == 1 ?
+                "Ты уже на последнем чекпоинте, просто прыгай в портал)" :
+                "You already at the last checkpoint, just go to the portal)"
             );
             okAction = 0;
         }
@@ -178,7 +177,10 @@ public class GameOverlay : MonoBehaviour
         {
             Debug.Log("AD");
             RespawnScreenOff();
-            NextCheckpoint();
+
+            main.GetComponent<main_script>().waitTp = true;
+
+            AdManager.AdManager.m_instance.ShowRewardedAd();
         }
     }
     public void NextCheckpoint()
