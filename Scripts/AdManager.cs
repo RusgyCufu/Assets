@@ -71,6 +71,7 @@ namespace AdManager
         public void Start()
         {
             gameObject.transform.parent = null;
+            showFpsMeter = (PlayerPrefs.GetInt("Fps") != 0);
             CreateInstance();
         }
 

@@ -43,6 +43,7 @@ public class Death : MonoBehaviour
         Debug.Log(collision.gameObject);
         if (collision == main.GetComponent<CapsuleCollider2D>())
         {
+            Vibration.VibratePeek();
             if (hide)
             {
                 gameObject.GetComponent<SpriteRenderer>().color = oldColor;

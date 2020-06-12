@@ -1361,7 +1361,8 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 72
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1961621246092247684, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
 --- !u!1 &138327418 stripped
 GameObject:
@@ -1417,6 +1418,7 @@ MonoBehaviour:
   Zhabka3: {fileID: 0}
   Zhabka4: {fileID: 0}
   Zhabka5: {fileID: 0}
+  ActiveZhabka: {fileID: 0}
   dropDelay: 0.37
   cubes: []
   newCubeTime: 12
@@ -1432,6 +1434,8 @@ MonoBehaviour:
   salt: 0
   doGI: 0
   saltSpeed: 100
+  stupidCode: 0
+  stupidCode1: 0
 --- !u!114 &138327422 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3100960423915274707, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
@@ -26761,7 +26765,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1712932990

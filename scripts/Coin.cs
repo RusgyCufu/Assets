@@ -25,6 +25,7 @@ public class Coin : MonoBehaviour
     public UnityEvent onCollect;
     void Collect()
     {
+        Vibration.VibratePop();
         PlayerPrefs.SetInt("coin_" +
             SceneManager.GetActiveScene().name +
             "_" + transform.position.x.ToString() +

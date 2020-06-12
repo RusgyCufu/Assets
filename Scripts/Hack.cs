@@ -14,6 +14,10 @@ public class Hack : MonoBehaviour
     public int[] t1;
     public int[] t2;
 
+    public string[] Bcmd;
+    public int[] Bt1;
+    public int[] Bt2;
+
     public static string Reverse(string s)
     {
         char[] charArray = s.ToCharArray();
@@ -95,6 +99,25 @@ public class Hack : MonoBehaviour
 
     }
 
+    public void Solve1()
+    {
+        for(int i =0; i < 16; ++i)
+        {
+            cmd[i] = Bcmd[i];
+            t1[i] = Bt1[i];
+            t2[i] = Bt2[i];
+        }
+    }
+
+    public void Solve2()
+    {
+        for (int i = 16; i < 32; ++i)
+        {
+            cmd[i] = Bcmd[i];
+            t1[i] = Bt1[i];
+            t2[i] = Bt2[i];
+        }
+    }
     // Update is called once per frame
     void Update()
     {

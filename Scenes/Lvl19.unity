@@ -9870,7 +9870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 527925572321591324, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -23
+      value: -23.000488
       objectReference: {fileID: 0}
     - target: {fileID: 527925572321591324, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -10075,10 +10075,6 @@ PrefabInstance:
     - target: {fileID: 3100960423915274707, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: checkpoints.Array.data[8]
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3100960423915274707, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
-      propertyPath: debug
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3100960423915274707, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

@@ -42,6 +42,7 @@ public class CharacterController2D : MonoBehaviour
 
 	public void Jump(float force = 0f)
 	{
+		Vibration.VibratePop();
 		if (ignoreJump == false)
 		{
 			//Stop falling
@@ -89,6 +90,7 @@ public class CharacterController2D : MonoBehaviour
 				if (!wasGrounded)
 				{
 					OnLandEvent.Invoke();
+					Vibration.VibrateNope();
 					AudioManager.AudioManager.m_instance.PlaySFX("Land");
 				}
 
@@ -152,7 +154,10 @@ public class CharacterController2D : MonoBehaviour
 	}
 	public void Dash()
 	{
-		if (dashesLeft > 0 && !m_Grounded && (m_Rigidbody2D.velocity.x > 1f || m_Rigidbody2D.velocity.x < -1f))
+		Vibration.VibratePeek();
+		if (dashesLeft > 0 && !m_Grounded
+			//&& (m_Rigidbody2D.velocity.x > 1f || m_Rigidbody2D.velocity.x < -1f)
+			)
 		{
 			GetChildWithName(GameObject.FindGameObjectWithTag("Phantom"), "part").GetComponent<ParticleSystem>().Play();
 			dashesLeft -= 1;

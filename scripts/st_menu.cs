@@ -9,7 +9,34 @@ public class st_menu : MonoBehaviour
     [SerializeField] public string DEFAULT_LVL;
     [SerializeField] TMPro.TextMeshProUGUI statsText;
 
+    public UnityEngine.UI.Slider sl;
 
+    public float time;
+
+    #region vibration
+    public void SetSlTime()
+    {
+        time = sl.value;
+    }
+    public void VibrateTime()
+    {
+        Vibration.Vibrate(Mathf.RoundToInt(time * 1000));
+    }
+    public void TapPopVibrate()
+    {
+        Vibration.VibratePop();
+    }
+
+    public void TapPeekVibrate()
+    {
+        Vibration.VibratePeek();
+    }
+
+    public void TapNopeVibrate()
+    {
+        Vibration.VibrateNope();
+    }
+    #endregion vibration
     #region main
     public void CopyToClipboard()
     {

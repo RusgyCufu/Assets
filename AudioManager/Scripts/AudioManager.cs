@@ -32,6 +32,8 @@ namespace AudioManager
             SetUpAudioArray(m_sfxList);
 
             ClearCurrentPrevMusic();
+
+            m_instance.PlayLvlMusic();
         }
 
         private void CreateInstance()
@@ -39,13 +41,9 @@ namespace AudioManager
             if (!m_instance)
             {
                 m_instance = this;
-                m_instance.PlayLvlMusic();
-                m_instance.PlayLvlMusic();
             }
             else
             {
-                m_instance.PlayLvlMusic();
-                m_instance.PlayLvlMusic();
                 Destroy(gameObject);
             }
         }
@@ -68,8 +66,8 @@ namespace AudioManager
             else if (name == "Lvl12")             PlayMusic("Snow");
             else if (name == "Lvl13")             PlayMusic("Ordinary");
             else if (name == "Lvl14")             PlayMusic("Puzzle");
-            else if (name == "Lvl15")             PlayMusic("");
-            else if (name == "Lvl16")             PlayMusic("");
+            else if (name == "Lvl15")             PlayMusic("Moon");
+            else if (name == "Lvl16")             PlayMusic("Water");
             else if (name == "Lvl17")             PlayMusic("");
             else if (name == "Lvl18")             PlayMusic("Night");
             else if (name == "Lvl19")             PlayMusic("Ordinary");
@@ -106,6 +104,7 @@ namespace AudioManager
         {
             Debug.Log("Playing Music");
             AudioData t_data = Array.Find(m_backgroundMusicList, bgm => bgm.m_name == _name);
+
             if (t_data == null)
             {
                 Debug.LogError("Didnt find music");
@@ -139,11 +138,13 @@ namespace AudioManager
 
         private void PlayNextMusicTrack()
         {
+            m_currentMusic.m_audioSource.Play();
             if (!m_currentMusic.m_fade && m_prevMusic.m_audioSource != null)
             {
                 m_prevMusic.m_audioSource.Stop();
             }
-            m_currentMusic.m_audioSource.Play();
+
+
             if (m_currentMusic.m_fade)
             {
                 StartCoroutine(FadeIn(m_currentMusic));
