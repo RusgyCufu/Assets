@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_backgroundMusicList:
   - m_name: Cave
-    m_audioClip: {fileID: 8300000, guid: de76dad97e9b53f40b019782f05a611a, type: 3}
+    m_audioClip: {fileID: 8300000, guid: b29d19a396b01b0469217ce1f75cce43, type: 3}
     m_looping: 1
     m_volume: 1
     m_pitch: 1
@@ -55,7 +55,7 @@ MonoBehaviour:
     m_object: {fileID: 0}
     m_audioSource: {fileID: 0}
   - m_name: Factory
-    m_audioClip: {fileID: 8300000, guid: edf67a58cdf25c448bab1710393534da, type: 3}
+    m_audioClip: {fileID: 8300000, guid: b955920848cd8bc4db9ddbb0486b63ec, type: 3}
     m_looping: 1
     m_volume: 1
     m_pitch: 1
@@ -65,7 +65,7 @@ MonoBehaviour:
     m_object: {fileID: 0}
     m_audioSource: {fileID: 0}
   - m_name: Night
-    m_audioClip: {fileID: 8300000, guid: 429b09a42399df64eb7f5735a7f317f2, type: 3}
+    m_audioClip: {fileID: 8300000, guid: d87c9a8ba599e5442bfaba5d2b2557a5, type: 3}
     m_looping: 1
     m_volume: 1
     m_pitch: 1
@@ -75,7 +75,7 @@ MonoBehaviour:
     m_object: {fileID: 0}
     m_audioSource: {fileID: 0}
   - m_name: Ordinary
-    m_audioClip: {fileID: 8300000, guid: 35b9e29875373f447b4e164fa9a65e15, type: 3}
+    m_audioClip: {fileID: 8300000, guid: eb6e90791fc8d0b41a2171bc50d4a82e, type: 3}
     m_looping: 1
     m_volume: 1
     m_pitch: 1
@@ -85,7 +85,7 @@ MonoBehaviour:
     m_object: {fileID: 0}
     m_audioSource: {fileID: 0}
   - m_name: Puzzle
-    m_audioClip: {fileID: 8300000, guid: cd86f1780942c7346867b96ffdc8c840, type: 3}
+    m_audioClip: {fileID: 8300000, guid: cabafc85a86851340b261dd494848d83, type: 3}
     m_looping: 1
     m_volume: 1
     m_pitch: 1
@@ -95,7 +95,7 @@ MonoBehaviour:
     m_object: {fileID: 0}
     m_audioSource: {fileID: 0}
   - m_name: Rain
-    m_audioClip: {fileID: 8300000, guid: 6d3099941e49a33418eb8657bd2789bc, type: 3}
+    m_audioClip: {fileID: 8300000, guid: 90a212e83f9df664cbbdb6be32e1369b, type: 3}
     m_looping: 1
     m_volume: 1
     m_pitch: 1
@@ -105,7 +105,7 @@ MonoBehaviour:
     m_object: {fileID: 0}
     m_audioSource: {fileID: 0}
   - m_name: Snow
-    m_audioClip: {fileID: 8300000, guid: c3dda547b77fef044b48b6de2c8ef919, type: 3}
+    m_audioClip: {fileID: 8300000, guid: fd06ff20d196f1248b711d4c19a8f1eb, type: 3}
     m_looping: 1
     m_volume: 1
     m_pitch: 1
@@ -115,9 +115,9 @@ MonoBehaviour:
     m_object: {fileID: 0}
     m_audioSource: {fileID: 0}
   - m_name: Menu
-    m_audioClip: {fileID: 8300000, guid: 0f0b1cd611337494faa125bec814f6ac, type: 3}
+    m_audioClip: {fileID: 8300000, guid: 6d5deff18a8912749a200c9345de2675, type: 3}
     m_looping: 1
-    m_volume: 1
+    m_volume: 50
     m_pitch: 1
     m_fadeInSpeed: 0
     m_fadeOutSpeed: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
     m_object: {fileID: 0}
     m_audioSource: {fileID: 0}
   - m_name: Moon
-    m_audioClip: {fileID: 8300000, guid: 0f0b1cd611337494faa125bec814f6ac, type: 3}
+    m_audioClip: {fileID: 8300000, guid: 6d5deff18a8912749a200c9345de2675, type: 3}
     m_looping: 1
     m_volume: 1
     m_pitch: 1
@@ -135,7 +135,17 @@ MonoBehaviour:
     m_object: {fileID: 0}
     m_audioSource: {fileID: 0}
   - m_name: Water
-    m_audioClip: {fileID: 8300000, guid: 12c79bc69e10c7d489dd865c2edbbfdd, type: 3}
+    m_audioClip: {fileID: 8300000, guid: 079d7246914e8ea41833ea29cc6dba7e, type: 3}
+    m_looping: 1
+    m_volume: 1
+    m_pitch: 1
+    m_fadeInSpeed: 0
+    m_fadeOutSpeed: 0
+    m_fade: 0
+    m_object: {fileID: 0}
+    m_audioSource: {fileID: 0}
+  - m_name: Final
+    m_audioClip: {fileID: 8300000, guid: 23fe39006912e7d41b2ad6b4db63a30b, type: 3}
     m_looping: 1
     m_volume: 1
     m_pitch: 1
@@ -166,7 +176,7 @@ MonoBehaviour:
     m_object: {fileID: 0}
     m_audioSource: {fileID: 0}
   - m_name: Death
-    m_audioClip: {fileID: 8300000, guid: fcbc2fe5bcdae6f48999753cfbf22e8e, type: 3}
+    m_audioClip: {fileID: 8300000, guid: 1b93be1d841ddf44f88b017053284c88, type: 3}
     m_looping: 0
     m_volume: 1
     m_pitch: 1

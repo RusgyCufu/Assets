@@ -12,10 +12,14 @@ public class GameOverlay : MonoBehaviour
 
     private GameObject main;
     private bool isPaused = false;
-
     private int okAction;
-
     private int language;
+    private float coinTime = 0f;
+    private int lastCoin = -10;
+
+
+    private GameObject c1;
+    private GameObject c2;
 
     GameObject GetChildWithName(GameObject obj, string name)
     {
@@ -55,6 +59,9 @@ public class GameOverlay : MonoBehaviour
         GetChildWithName(GetChildWithName(this.gameObject, "Act"), "Text (TMP)").GetComponent<TMPro.TextMeshProUGUI>().alpha = buttonsTransparency;
         GetChildWithName(GetChildWithName(this.gameObject, "PauseButton"), "Text (TMP)").GetComponent<TMPro.TextMeshProUGUI>().alpha = buttonsTransparency;
         Resume();
+
+        c1 = GetChildWithName(GetChildWithName(this.gameObject, "ActOverlay"), "CoinCounter");
+        c2 = GetChildWithName(GetChildWithName(this.gameObject, "ActOverlay"), "Image");
     }
     void Update()
     {
@@ -62,7 +69,21 @@ public class GameOverlay : MonoBehaviour
         TMPro.TextMeshProUGUI coinCounter =
             GetChildWithName(GetChildWithName(this.gameObject, "ActOverlay"), "CoinCounter").GetComponent< TMPro.TextMeshProUGUI>();
         coinCounter.SetText(coins.ToString());
-}
+
+        if(coins != lastCoin)
+        {
+            c1.SetActive(true);
+            c2.SetActive(true);
+            coinTime = 0f;
+        }
+        if(coinTime >= 5f)
+        {
+            c1.SetActive(false);
+            c2.SetActive(false);
+        }
+        coinTime += Time.deltaTime;
+        lastCoin = coins;
+    }
     public void PauseButton()
     {
         if (isPaused)
@@ -87,7 +108,6 @@ public class GameOverlay : MonoBehaviour
         isPaused = false;
         pauseOverlay.enabled = false;
         GetChildWithName(GetChildWithName(this.gameObject, "PauseButton"), "Text (TMP)").GetComponent<TMPro.TextMeshProUGUI>().SetText("| |");
-
         Time.timeScale = 1;
     }
     public void ToMainMenu()
@@ -105,6 +125,12 @@ public class GameOverlay : MonoBehaviour
         GetChildWithName(this.gameObject, "RestartOverlay").GetComponent<Canvas>().enabled = false;
         main.GetComponent<main_script>().hp = 1f;
         main.GetComponent<main_script>().respawn(main.GetComponent<main_script>().resp);
+
+        if (PlayerPrefs.GetFloat("last_ad_time") > 60f && PlayerPrefs.GetInt("DisableAds") != 1)
+        {
+            AdManager.AdManager.m_instance.ShowInterstitialAd();
+            PlayerPrefs.SetFloat("last_ad_time", 0f);
+        }
     }
 
     // Notifications
@@ -194,7 +220,7 @@ public class GameOverlay : MonoBehaviour
                 newCheckpoint = main.GetComponent<main_script>().checkpoints[j + 1];
             }
         }
-        Debug.Log(newCheckpoint);
-        main.GetComponent<main_script>().respawn(newCheckpoint);
+
+        if(newCheckpoint != null) main.GetComponent<main_script>().respawn(newCheckpoint);
     }
 }

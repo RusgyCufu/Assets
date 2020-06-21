@@ -7040,6 +7040,7 @@ MonoBehaviour:
   Zhabka3: {fileID: 0}
   Zhabka4: {fileID: 0}
   Zhabka5: {fileID: 0}
+  ActiveZhabka: {fileID: 0}
   dropDelay: 1
   cubes: []
   newCubeTime: 12
@@ -7057,6 +7058,8 @@ MonoBehaviour:
   salt: 0
   doGI: 0
   saltSpeed: 200
+  stupidCode: 0
+  stupidCode1: 0
 --- !u!114 &515700206
 MonoBehaviour:
   m_ObjectHideFlags: 0

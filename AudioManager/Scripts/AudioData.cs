@@ -13,7 +13,7 @@ namespace AudioManager
 
         public bool m_looping;
 
-        [Range(0f, 1f)]
+        [Range(0f, 50f)]
         public float m_volume = 1;
 
         [Range(0.3f, 6f)]

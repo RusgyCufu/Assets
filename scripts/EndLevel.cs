@@ -24,6 +24,10 @@ public class EndLevel : MonoBehaviour
             //AudioManager.AudioManager.m_instance.PlaySFX("Portal");
             PlayerPrefs.SetInt("Lvl" + unlock.ToString() + "unlock", 1);
             SceneManager.LoadScene(NEXT_LEVEL);
+            if (PlayerPrefs.GetInt("DisableAds") != 1)
+            {
+                AdManager.AdManager.m_instance.ShowRewardedAd();
+            }
         }
     }
 }

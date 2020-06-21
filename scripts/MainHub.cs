@@ -12,6 +12,10 @@ public class MainHub : MonoBehaviour
         {
             main.GetComponent<CharacterController2D>().maxJumpCount = 2;
         }
+        if (PlayerPrefs.GetInt("Lvl19unlock") == 1)
+        {
+            main.GetComponent<CharacterController2D>().maxJumpCount = 9999999;
+        }
 
         main.GetComponent<CharacterController2D>().maxDashes = PlayerPrefs.GetInt("max_dashes");
     }

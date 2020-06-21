@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec82e5e4477b599418672cbe7339f855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  b: 0
   OnAdLoadedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -58,18 +59,6 @@ MonoBehaviour:
   OnUserEarnedRewardEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5161207651176089261}
-        m_TargetAssemblyTypeName: AdManager, Assembly-CSharp
-        m_MethodName: RequestAndLoadRewardedAd
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LvlScripts, Assembly-CSharp
         m_MethodName: ZhabkaAd

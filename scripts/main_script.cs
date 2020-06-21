@@ -111,6 +111,8 @@ public class main_script : MonoBehaviour
     }
     private void Update()
     {
+        PlayerPrefs.SetFloat("last_ad_time", PlayerPrefs.GetFloat("last_ad_time") + Time.deltaTime);
+
         if (waitTp && adComplite)
         {
             adComplite = false;

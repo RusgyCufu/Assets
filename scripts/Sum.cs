@@ -18,7 +18,7 @@ public class Sum : MonoBehaviour
         value = 0;
         for(int i = 0; i < switches.Length; ++i)
         {
-            value += Mathf.RoundToInt(Mathf.Pow(2, i)) * switches[i].GetComponent<OneZero>().value;
+            value += Mathf.RoundToInt(Mathf.Pow(2, switches.Length - i - 1)) * switches[i].GetComponent<OneZero>().value;
         }
 
 

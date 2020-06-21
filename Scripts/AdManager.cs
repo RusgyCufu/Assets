@@ -10,6 +10,8 @@ namespace AdManager
 {
     public class AdManager : MonoBehaviour
     {
+        public bool b;
+
         private BannerView bannerView;
         private InterstitialAd interstitialAd;
         private RewardedAd rewardedAd;
@@ -35,6 +37,8 @@ namespace AdManager
             if (!m_instance)
             {
                 m_instance = this;
+
+
                 List<String> deviceIds = new List<String>() { AdRequest.TestDeviceSimulator };
 
                 // Add some test device IDs (replace with your own device IDs).
@@ -58,13 +62,9 @@ namespace AdManager
             }
             else
             {
-                bannerView = m_instance.bannerView;
-                interstitialAd = m_instance.interstitialAd;
-                rewardedAd = m_instance.rewardedAd;
-
-                Destroy(m_instance.gameObject);
-                m_instance = this;
-                DontDestroyOnLoad(gameObject);
+                m_instance.statusText = statusText;
+                m_instance.fpsMeter = fpsMeter;
+                Destroy(this.gameObject);
             }
         }
 
@@ -91,6 +91,10 @@ namespace AdManager
 
         private void Update()
         {
+            if (fpsMeter == null)
+            {
+                return;
+            }
             if (showFpsMeter)
             {
                 fpsMeter.gameObject.SetActive(true);
@@ -180,7 +184,7 @@ namespace AdManager
 #else
                 string adUnitId = "unexpected_platform";
 #endif
-
+            adUnitId = "ca-app-pub-4800162937668095/7237597358";
             // Clean up interstitial before using it
             if (interstitialAd != null)
             {
@@ -236,7 +240,7 @@ namespace AdManager
 #else
             string adUnitId = "unexpected_platform";
 #endif
-
+            adUnitId = "ca-app-pub-4800162937668095/9023751507";
             // create new rewarded ad instance
             rewardedAd = new RewardedAd(adUnitId);
 
@@ -306,15 +310,18 @@ namespace AdManager
         {
             MonoBehaviour.print("HandleRewardedAdClosed event received");
             OnAdClosedEvent.Invoke();
+            RequestAndLoadRewardedAd();
         }
         public void HandleUserEarnedReward(object sender, Reward args)
         {
             string type = args.Type;
             double amount = args.Amount;
+            b = true;
             Debug.Log(
                 "HandleRewardedAdRewarded event received for "
                             + amount.ToString() + " " + type);
-            OnUserEarnedRewardEvent.Invoke();
+            Debug.Log(b);
+            b = true;
         }
 
         #endregion

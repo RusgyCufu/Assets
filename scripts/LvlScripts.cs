@@ -65,8 +65,7 @@ public class LvlScripts : MonoBehaviour
     }
     public void ZhabkaAd(bool ass)
     {
-        stupidCode = true;
-        stupidCode1 = ass;
+        ActiveZhabka.GetComponent<ATM>().FinishBuyByAd(true);
     }
     public void ResetLevel(int checkpoint)
     {
@@ -169,11 +168,6 @@ public class LvlScripts : MonoBehaviour
                 main.GetComponent<CharacterController2D>().ignoreJump = false;
                 main.GetComponent<CharacterController2D>().doInvertGravity = false;
             }
-        }
-        if (stupidCode)
-        {
-            stupidCode = false;
-            ActiveZhabka.GetComponent<ATM>().FinishBuyByAd(stupidCode1);
         }
     }
 }

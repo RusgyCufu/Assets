@@ -51,7 +51,7 @@ namespace AudioManager
         private void PlayLvlMusic()
         {
             string name = SceneManager.GetActiveScene().name;
-            if      (name == "Lvl0")              PlayMusic("Night");
+            if      (name == "Lvl0")              PlayMusic("Final");
             else if (name == "Lvl1")              PlayMusic("Factory");
             else if (name == "Lvl2")              PlayMusic("Ordinary");
             else if (name == "Lvl3")              PlayMusic("Factory");
@@ -68,11 +68,11 @@ namespace AudioManager
             else if (name == "Lvl14")             PlayMusic("Puzzle");
             else if (name == "Lvl15")             PlayMusic("Moon");
             else if (name == "Lvl16")             PlayMusic("Water");
-            else if (name == "Lvl17")             PlayMusic("");
+            else if (name == "Lvl17")             PlayMusic("Moon");
             else if (name == "Lvl18")             PlayMusic("Night");
             else if (name == "Lvl19")             PlayMusic("Ordinary");
             else if (name == "Lvl20")             PlayMusic("Puzzle");
-            else if (name == "SpacetoadsGallery") PlayMusic("");
+            else if (name == "SpaceToadsGallery") PlayMusic("Final");
         }
 
         private void SetUpAudioArray(AudioData[] _array)

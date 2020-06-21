@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.Purchasing;
 
 public class ATM : MonoBehaviour
 {
@@ -20,7 +21,9 @@ public class ATM : MonoBehaviour
         public bool useForSkins = false;
         public int skinID = 0;
         public GameObject mainATM;
-
+    [Header("forIAP")]
+    public bool doIAP = false;
+    public string nameIAP;
 
     GameObject GetChildWithName(GameObject obj, string name)
     {
@@ -66,7 +69,7 @@ public class ATM : MonoBehaviour
     {
         main.GetComponent<LvlScripts>().ActiveZhabka = this.gameObject;
 
-        value = 99999;
+        value = 1999999999;
         Buy();
 
         AdManager.AdManager.m_instance.ShowRewardedAd();
@@ -97,6 +100,12 @@ public class ATM : MonoBehaviour
             main.GetComponent<main_script>().ChangeSkin(skinID);
         }
     }
+    public string GetPrice(string productID)
+    {
+        string s = "";
+        //s = 
+        return s;
+    }
     private void Start()
     {
         if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_atm_lock_" + transform.position.x + "_" + transform.position.x) == 1)
@@ -105,7 +114,12 @@ public class ATM : MonoBehaviour
         }
         main = GameObject.FindGameObjectWithTag("main");
         dia = GameObject.FindGameObjectWithTag("dialogUi").GetComponent<dialog>();
-        text.SetText(value.ToString());
+
+        if (doIAP)
+        {
+        }
+        else text.SetText(value.ToString());
+
         if (useForSkins)
         {
             GetChildWithName(GetChildWithName(mainATM, "Canvas1"), "SkinName").GetComponent<TextLocalization>().RU = main.GetComponent<main_script>().skinNamesRU[skinID];

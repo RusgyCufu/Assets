@@ -12,6 +12,7 @@ public class st_menu : MonoBehaviour
     public UnityEngine.UI.Slider sl;
 
     public float time;
+    public bool ignoreMusic = false;
 
     #region vibration
     public void SetSlTime()
@@ -48,9 +49,12 @@ public class st_menu : MonoBehaviour
     }
     void Start()
     {
+        if (!ignoreMusic)
+        {
+            PlayerPrefs.SetFloat("last_ad_time", 0f);
+            AudioManager.AudioManager.m_instance.PlayMusic("Menu");
+        }
         
-
-        AudioManager.AudioManager.m_instance.PlayMusic("Menu");
         if (PlayerPrefs.HasKey("buttonsTransparency") == false)
         {
             PlayerPrefs.SetFloat("buttonsTransparency", 0.5f);

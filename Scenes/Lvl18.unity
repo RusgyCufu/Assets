@@ -4528,6 +4528,10 @@ PrefabInstance:
       propertyPath: _GroundCast
       value: 
       objectReference: {fileID: 1526921280}
+    - target: {fileID: 1911205657141781027, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
+      propertyPath: OnUserEarnedRewardEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1917594891122185471, guid: 12b10642e2f7af941a7abc5ba3f8cc61, type: 3}
       propertyPath: m_RootOrder
       value: 3

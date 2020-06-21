@@ -31,7 +31,7 @@ public class checkpoint_script : MonoBehaviour
         {
             if (!open)
             {
-                Vibration.VibratePeek();
+                if (ignorePart == false) Vibration.VibratePeek();
                 main.resp = this.gameObject;
                 if (dontOpen == false)
                 {
